@@ -1,3 +1,6 @@
 #landingHeader{
     opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
