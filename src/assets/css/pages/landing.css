@@ -1,6 +1,11 @@
 #landingHeader{
-    opacity: 0.8;
+    opacity: 0.75;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-bottom-right-radius: 500% 1000px;
+    
 }
