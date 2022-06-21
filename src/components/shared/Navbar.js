@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-        <nav className="bg-transparent px-2 sm:px-4 py-2.5">
+        <nav className="bg-transparent px-2 sm:px-4 py-2.5 border-b-4">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <Link to="/" className="flex items-center">
                     <img
@@ -17,7 +17,7 @@ export default function Navbar() {
                     className="hidden w-full md:block md:w-auto"
                     id="mobile-menu"
                 >
-                    <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:text-base">
+                    <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
                             <Link
                                 to="/"
