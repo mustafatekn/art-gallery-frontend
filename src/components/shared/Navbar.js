@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-        <nav className="bg-transparent px-2 sm:px-4 py-2.5 border-b-4">
-            <div className="container flex flex-wrap justify-between items-center mx-auto">
+        <nav className="bg-transparent px-2 sm:px-4 py-6 border-b-2">
+            <div className="container flex flex-wrap justify-between items-center mx-auto font">
                 <Link to="/" className="flex items-center">
                     <img
                         src="/assets/images/logo.png"
@@ -20,15 +20,6 @@ export default function Navbar() {
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
                             <Link
-                                to="/"
-                                className="block py-2 pr-4 pl-3 text-primary-black"
-                                aria-current="page"
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
                                 to="/projects"
                                 className="block py-2 pr-4 pl-3 text-primary-black"
                             >
@@ -40,7 +31,7 @@ export default function Navbar() {
                                 to="/rixusart"
                                 className="block py-2 pr-4 pl-3 text-primary-black"
                             >
-                                Rixusart
+                                About Me
                             </Link>
                         </li>
                         <li>
@@ -49,12 +40,6 @@ export default function Navbar() {
                                 className="inline-block py-2 pr-4 pl-3 text-primary-black"
                             >
                                 Shop
-                                <svg
-                                    role="img"
-                                    className="w-6 h-6 inline-block text-primary-black ml-1"
-                                >
-                                    <use xlinkHref="/assets/icons/sprite.svg#instagram" />
-                                </svg>
                             </Link>
                         </li>
                         <li>
