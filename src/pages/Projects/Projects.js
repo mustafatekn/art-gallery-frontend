@@ -46,7 +46,21 @@ export default function Projects() {
         },
     ])
 
-    return <DefaultLayout>
-        <div className='container'>selam</div>
-    </DefaultLayout>
+    return (
+        <DefaultLayout>
+            <div className="container flex flex-col mx-auto text-center">
+                {projects?.map((project) => (
+                    <div className="mx-auto my-6" key={project.id}>
+                        <div className='font-medium text-lg mb-1'>{project.title}</div>
+                        <img
+                            src={project.imageUrl}
+                            alt={project.url}
+                            className="object-cover object-center"
+                            style={{ width: 500, height: 300 }}
+                        />
+                    </div>
+                ))}
+            </div>
+        </DefaultLayout>
+    )
 }
