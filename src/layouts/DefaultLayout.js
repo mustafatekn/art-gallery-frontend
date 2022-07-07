@@ -6,7 +6,7 @@ export default function DefaultLayout({ children }) {
     return (
         <>
             <Navbar />
-            <main>{children}</main>
+            <main className="my-20">{children}</main>
             <Footer />
         </>
     )
