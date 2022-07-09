@@ -3,10 +3,14 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Projects({ projects }) {
   return (
     <DefaultLayout>
+      <Head>
+        <title>Rixusart | Projects</title>
+      </Head>
       <div className="container flex flex-col mx-auto text-center">
         {projects?.map((project) => (
           <div className="mx-auto my-6" key={project.id}>
