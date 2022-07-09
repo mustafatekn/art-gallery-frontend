@@ -1,11 +1,12 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import styles from './DefaultLayout.module.css';
 
 export default function DefaultLayout({ children }) {
   return (
     <>
       <Navbar />
-      <main className="my-24">{children}</main>
+      <main id={styles.contentWrapper}>{children}</main>
       <Footer />
     </>
   );

@@ -8,12 +8,13 @@ export default function Landing() {
       <Head>
         <title>Rixusart</title>
       </Head>
-      <div className="container mx-auto text-center mt-20">
+      <div className="container mx-auto text-center">
         <Image
           src="/assets/images/landing-cat.jpg"
           alt="rixusart-cat"
           width={500}
           height={500}
+          className="object-cover object-center"
         />
       </div>
     </DefaultLayout>

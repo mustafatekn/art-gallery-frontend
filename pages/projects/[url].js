@@ -14,7 +14,7 @@ export default function ProjectDetails({ project }) {
             src={project?.thumbnail?.url}
             alt={project?.thumbnail?.explanation}
             style={{ width: 1000, height: 400 }}
-            className="object-center object-cover mt-1"
+            className="object-center object-cover"
           />
         </div>
       </div>
