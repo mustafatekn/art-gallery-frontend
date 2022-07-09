@@ -2,14 +2,9 @@ import React, { useEffect, useState } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function Projects() {
-  const [projects, setProjects] = useState();
-
-  useEffect(() => {
-    setProjects([...projectData]);
-  }, []);
-
+export default function Projects({ projects }) {
   return (
     <DefaultLayout>
       <div className="container flex flex-col mx-auto text-center">
@@ -17,16 +12,30 @@ export default function Projects() {
           <div className="mx-auto my-6" key={project.id}>
             <div className="font-medium text-lg mb-1">{project.title}</div>
             <Link href={`/projects/${project.url}`}>
-              <img
-                src={project.thumbnail.url}
-                alt={project.thumbnail.explanation}
-                className="object-cover object-center hover:contrast-75"
-                style={{ width: 500, height: 300 }}
-              />
+              <a>
+                <Image
+                  loader={() => project.thumbnail.url}
+                  src={project.thumbnail.url}
+                  alt={project.thumbnail.explanation}
+                  className="object-cover object-center hover:contrast-75"
+                  width={500}
+                  height={300}
+                  unoptimized
+                />
+              </a>
             </Link>
           </div>
         ))}
       </div>
     </DefaultLayout>
   );
+}
+
+export async function getStaticProps() {
+  const projects = [...projectData];
+  return {
+    props: {
+      projects,
+    },
+  };
 }
