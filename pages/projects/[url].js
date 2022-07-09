@@ -18,7 +18,7 @@ export default function ProjectDetails({ project }) {
           />
         </div>
       </div>
-      <div className="grid-cols-12 lg:grid mt-2">
+      <div className="grid-cols-12 lg:grid">
         {project?.images?.map((img) => (
           <div className="flex-col col-span-4 lg:flex" key={img.url}>
             <div className="flex flex-col gap-4">
