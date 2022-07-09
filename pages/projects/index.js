@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Link from "next/link";

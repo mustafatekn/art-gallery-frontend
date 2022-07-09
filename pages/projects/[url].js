@@ -11,8 +11,8 @@ export default function ProjectDetails({ project }) {
       <div className="container mx-auto w-full">
         <div className="flex justify-center">
           <img
-            src={project?.thumbnail?.url}
-            alt={project?.thumbnail?.explanation}
+            src={project.thumbnail.url}
+            alt={project.thumbnail.explanation}
             style={{ width: 1000, height: 400 }}
             className="object-center object-cover"
           />
@@ -23,9 +23,9 @@ export default function ProjectDetails({ project }) {
           <div className="flex-col col-span-4 lg:flex" key={img.url}>
             <div className="flex flex-col gap-4">
               <img
-                src={img?.url}
+                src={img.url}
                 className="object-center object-cover w-full h-full"
-                alt={img?.explanation}
+                alt={img.explanation}
                 style={{ height: 500 }}
               />
             </div>
