@@ -1,16 +1,16 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="bg-white px-2 sm:px-4 py-6 border-b-2 fixed top-0 right-0 left-0">
       <div className="container flex flex-wrap justify-between items-center mx-auto font">
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="/assets/images/logo.png"
-            className="mr-3 h-6 sm:h-9"
+            width={270}
+            height={36}
             alt="Rixusart Logo"
           />
-          <span className="sr-only">Rixusart</span>
         </Link>
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
