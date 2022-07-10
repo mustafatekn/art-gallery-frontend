@@ -3,6 +3,7 @@ export const projectData = [
     id: 1,
     title: "title 1",
     text: "text 1",
+    location:'Kayseri',
     images: [
       {
         url: "https://www.thoughtco.com/thmb/VG5-1LGCmdWyW23Uf7Vr-R_5tqk=/3504x2336/filters:fill(auto,1)/GettyImages-116248249-5be59c3cc9e77c00514fed87.jpg",
@@ -27,6 +28,7 @@ export const projectData = [
     id: 2,
     title: "title 2",
     text: "text 2",
+    location:'Ankara',
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
@@ -51,6 +53,7 @@ export const projectData = [
     id: 3,
     title: "title 3",
     text: "text 3",
+    location: 'İstanbul',
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
@@ -75,6 +78,7 @@ export const projectData = [
     id: 4,
     title: "title 4",
     text: "text 4",
+    location:'Ankara',
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",

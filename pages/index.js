@@ -12,8 +12,8 @@ export default function Landing() {
         <Image
           src="/assets/images/landing-cat.jpg"
           alt="rixusart-cat"
-          width={500}
-          height={500}
+          width={1000}
+          height={700}
           className="object-cover object-center"
         />
       </div>
