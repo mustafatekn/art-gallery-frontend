@@ -8,25 +8,25 @@ export default function ProjectDetails({ project }) {
       <Head>
         <title>{project.title}</title>
       </Head>
-      <div className="container mx-auto w-full">
+      <div className="mx-auto w-full">
         <div className="flex justify-center">
           <img
             src={project.thumbnail.url}
             alt={project.thumbnail.explanation}
-            style={{ width: 1000, height: 400 }}
-            className="object-center object-cover"
+            className="object-fill w-full"
+            style={{maxHeight:700}}
           />
         </div>
       </div>
-      <div className="grid-cols-12 lg:grid">
+      <div className="grid-cols-12 gap-12 mt-12 lg:grid mx-12">
         {project?.images?.map((img) => (
-          <div className="flex-col col-span-4 lg:flex" key={img.url}>
-            <div className="flex flex-col gap-4">
+          <div className="flex-col col-span-4 lg:flex">
+            <div className="flex flex-col gap-12">
               <img
                 src={img.url}
                 className="object-center object-cover w-full h-full"
                 alt={img.explanation}
-                style={{ height: 500 }}
+                style={{minHeight:500}}
               />
             </div>
           </div>
