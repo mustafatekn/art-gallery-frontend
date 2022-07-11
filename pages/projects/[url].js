@@ -13,8 +13,9 @@ export default function ProjectDetails({ project }) {
           <img
             src={project.thumbnail.url}
             alt={project.thumbnail.explanation}
-            className="object-fill w-full"
-            style={{ maxHeight: 700 }}
+            className="object-fill w-full h-auto"
+            loading="lazy"
+            style={{maxHeight:700}}
           />
         </div>
       </div>
@@ -23,22 +24,21 @@ export default function ProjectDetails({ project }) {
         <h6 className="font-bold text-2xl">{project.location}</h6>
         <p className="font-semibold text-xl">{project.text}</p>
       </div>
-      <div className="grid-cols-12 gap-12 lg:grid mx-12">
+      <div className="grid-cols-8 xl:grid-cols-12 gap-12 lg:grid mx-12">
         {project?.images?.map((img, index) => (
           <div
             className={
               index > 2
-                ? "flex-col col-span-4 lg:flex my-12"
-                : "flex-col col-span-4 lg:flex mb-12"
+                ? "flex-col col-span-4 lg:flex my-12 lg:my-0 w-full h-full"
+                : "flex-col col-span-4 lg:flex mb-12 lg:mb-0 w-full h-full"
             }
             key={img.url}
           >
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 w-full h-full">
               <img
                 src={img.url}
                 className="object-center object-cover w-full h-full"
                 alt={img.explanation}
-                style={{ minHeight: 500 }}
               />
             </div>
           </div>
