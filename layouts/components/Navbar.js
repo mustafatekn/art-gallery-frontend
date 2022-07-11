@@ -65,9 +65,9 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div>
+      <div className="block md:hidden">
         <button onClick={() => setOpen(true)}>
-          <svg role="img" className="w-6 h-6 text-primary-black mt-2 ml-2">
+          <svg role="img" className="w-6 h-6 text-primary-black mt-4 ml-3">
             <use xlinkHref="/assets/icons/sprite.svg#menu" />
           </svg>
         </button>
@@ -75,18 +75,25 @@ export default function Navbar() {
 
       {open && (
         <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-50 block md:hidden">
-          <div className="border-b-2 py-6 mx-auto">
-            <Link href="/" className="flex items-center">
-              <a>
-                <Image
-                  src="/assets/images/logo.png"
-                  width={270}
-                  height={36}
-                  alt="Rixusart Logo"
-                  className="h-6 sm:h-9"
-                />
-              </a>
-            </Link>
+          <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
+            <div className="flex self-start items-center">
+              <Link href="/">
+                <a>
+                  <Image
+                    src="/assets/images/logo.png"
+                    width={270}
+                    height={36}
+                    alt="Rixusart Logo"
+                    className="h-6 sm:h-9"
+                  />
+                </a>
+              </Link>
+            </div>
+            <button className="flex items-center mr-1" onClick={() => setOpen(false)}>
+              <svg role="img" className="w-6 h-6 ml-auto">
+                <use xlinkHref="/assets/icons/sprite.svg#close" />
+              </svg>
+            </button>
           </div>
           <div className="w-full  md:w-auto text-center" id="mobile-menu">
             <ul className="flex flex-col mt-10 font-semibold w-3/4 mx-auto">
