@@ -74,8 +74,8 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-50">
-          <div className="border-b-2 pt-3 mx-auto text-center">
+        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-50 block md:hidden">
+          <div className="border-b-2 py-6 mx-auto">
             <Link href="/" className="flex items-center">
               <a>
                 <Image
@@ -89,7 +89,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="w-full  md:w-auto text-center" id="mobile-menu">
-            <ul className="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium font-semibold">
+            <ul className="flex flex-col mt-10 font-semibold w-3/4 mx-auto">
               <li className="py-3 border-b-2">
                 <Link
                   href="/projects"
