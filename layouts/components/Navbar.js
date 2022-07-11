@@ -75,9 +75,22 @@ export default function Navbar() {
 
       {open && (
         <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-50">
-          <div className="w-full  md:w-auto" id="mobile-menu">
-            <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              <li>
+          <div className="border-b-2 pt-3 mx-auto text-center">
+            <Link href="/" className="flex items-center">
+              <a>
+                <Image
+                  src="/assets/images/logo.png"
+                  width={270}
+                  height={36}
+                  alt="Rixusart Logo"
+                  className="h-6 sm:h-9"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="w-full  md:w-auto text-center" id="mobile-menu">
+            <ul className="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium font-semibold">
+              <li className="py-3 border-b-2">
                 <Link
                   href="/projects"
                   className="block py-2 pr-4 pl-3 text-primary-black"
@@ -85,7 +98,7 @@ export default function Navbar() {
                   Projects
                 </Link>
               </li>
-              <li>
+              <li className="py-3 border-b-2">
                 <Link
                   href="/rixusart"
                   className="block py-2 pr-4 pl-3 text-primary-black"
@@ -93,7 +106,7 @@ export default function Navbar() {
                   About Me
                 </Link>
               </li>
-              <li>
+              <li className="py-3 border-b-2">
                 <Link
                   href="/shop"
                   className="inline-block py-2 pr-4 pl-3 text-primary-black"
@@ -101,7 +114,7 @@ export default function Navbar() {
                   Shop
                 </Link>
               </li>
-              <li>
+              <li className="py-3 border-b-2">
                 <Link
                   href="/contact"
                   className="block py-2 pr-4 pl-3 text-primary-black"
