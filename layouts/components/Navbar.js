@@ -22,7 +22,6 @@ export default function Navbar() {
                 width={270}
                 height={36}
                 alt="Rixusart Logo"
-                className="h-6 sm:h-9"
               />
             </a>
           </Link>

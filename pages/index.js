@@ -8,7 +8,7 @@ export default function Landing() {
       <Head>
         <title>Rixusart</title>
       </Head>
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-10 md:px-14 lg:px-0">
         <Image
           src="/assets/images/landing-cat.jpg"
           alt="rixusart-cat"
