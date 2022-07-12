@@ -7,5 +7,6 @@
   #contentWrapper {
     margin-top: 92px;
     margin-bottom: 96px;
+    height: calc(100vh - 188px);
   }
 }
