@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col text-base lg:text-xl font-semibold">
               <div className="w-full mx-auto px-4">
-                <div className="w-full lg:w-3/4 mx-auto space-y-3">
+                <div className="w-full lg:w-4/5 mx-auto space-y-3">
                   <div>Benimle iletişime geçmekten çekinmeyin.</div>
                   <div>
                     <a href="mailto:emirteke04@gmail.com">
@@ -39,7 +39,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col mt-10 lg:mt-0 items-center lg:items-start px-4">
+            <div className="flex flex-col mt-10 lg:mt-0 items-center lg:items-start px-4 2xl:w-4/5">
               <form className="w-full">
                 <div className="form-input-wrapper w-full">
                   <input
