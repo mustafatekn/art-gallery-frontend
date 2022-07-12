@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="h-screen flex flex-col items-center pt-10">
         <div className="cursor-pointer">
           <Link href="/">
-            <Image src="/assets/images/logo.png" width={540} height={72} />
+            <Image src="/assets/images/logo.png" width={540} height={72} alt="Rixusart Logo"/>
           </Link>
         </div>
         <div className="flex flex-col h-screen justify-center items-center space-y-10 md:space-y-20">
@@ -26,7 +26,7 @@ export default function NotFound() {
             </div>
           </div>
           <div className="text-2xl md:text-3xl space-y-5 text-center">
-            <div>The page you're looking for is not found.</div>
+            <div>The page you are looking for is not found</div>
             <div className="text-blue-900">
               <Link href="/">Go to homepage</Link>
             </div>
