@@ -11,7 +11,12 @@ export default function NotFound() {
       <div className="h-screen flex flex-col items-center pt-10">
         <div className="cursor-pointer">
           <Link href="/">
-            <Image src="/assets/images/logo.png" width={540} height={72} alt="Rixusart Logo"/>
+            <Image
+              src="/assets/images/logo.png"
+              width={540}
+              height={72}
+              alt="Rixusart Logo"
+            />
           </Link>
         </div>
         <div className="flex flex-col h-screen justify-center items-center space-y-10 md:space-y-20">
@@ -20,7 +25,7 @@ export default function NotFound() {
               <div className="text-6xl sm:text-6xl md:text-8xl italic font-bold">
                 404
               </div>
-              <div className="text-5xl sm:text-5xl md:text-6xl font-semibold">
+              <div className="text-5xl sm:text-5xl md:text-6xl font-semibold italic">
                 Not Found
               </div>
             </div>
