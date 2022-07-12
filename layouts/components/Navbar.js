@@ -96,7 +96,7 @@ export default function Navbar() {
           </div>
           <div className="w-full  md:w-auto text-center" id="mobile-menu">
             <ul className="flex flex-col mt-10 font-semibold w-3/4 mx-auto">
-              <li className="py-3 border-b-2">
+              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
                 <Link
                   href="/projects"
                   className="block py-2 pr-4 pl-3 text-primary-black"
@@ -104,7 +104,7 @@ export default function Navbar() {
                   Projects
                 </Link>
               </li>
-              <li className="py-3 border-b-2">
+              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
                 <Link
                   href="/rixusart"
                   className="block py-2 pr-4 pl-3 text-primary-black"
@@ -112,7 +112,7 @@ export default function Navbar() {
                   About Me
                 </Link>
               </li>
-              <li className="py-3 border-b-2">
+              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
                 <Link
                   href="/shop"
                   className="inline-block py-2 pr-4 pl-3 text-primary-black"
@@ -120,7 +120,7 @@ export default function Navbar() {
                   Shop
                 </Link>
               </li>
-              <li className="py-3 border-b-2">
+              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
                 <Link
                   href="/contact"
                   className="block py-2 pr-4 pl-3 text-primary-black"

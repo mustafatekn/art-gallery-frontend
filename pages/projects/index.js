@@ -14,19 +14,21 @@ export default function Projects({ projects }) {
         {projects?.map((project) => (
           <div className="mx-auto my-6" key={project.id}>
             <div className="font-medium text-lg mb-1">{project.title}</div>
-            <Link href={`/projects/${project.url}`}>
-              <a>
-                <Image
-                  loader={() => project.thumbnail.url}
-                  src={project.thumbnail.url}
-                  alt={project.thumbnail.explanation}
-                  className="object-cover object-center hover:contrast-75"
-                  width={500}
-                  height={300}
-                  unoptimized
-                />
-              </a>
-            </Link>
+            <div className="px-2 md:px-0">
+              <Link href={`/projects/${project.url}`}>
+                <a>
+                  <Image
+                    loader={() => project.thumbnail.url}
+                    src={project.thumbnail.url}
+                    alt={project.thumbnail.explanation}
+                    className="object-cover object-center hover:contrast-75"
+                    width={500}
+                    height={300}
+                    unoptimized
+                  />
+                </a>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
