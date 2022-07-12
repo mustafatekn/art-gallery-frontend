@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import DefaultLayout from "../layouts/DefaultLayout";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -8,18 +8,23 @@ export default function NotFound() {
       <Head>
         <title>Rixusart | Not Found</title>
       </Head>
-      <div className="h-screen flex flex-col items-center space-y-28 py-20">
-        <Image src="/assets/images/logo.png" width={270} height={36} />
-        <div className="mt-10">
-          <div className="w-96 h-96 border-4 border-zinc-900 rounded-full items-center justify-center flex">
-            <div className="w-80 h-80 rounded-full flex flex-col justify-center items-center space-y-5 italic">
-              <div className="text-8xl">404</div>
-              <div className="text-6xl">Not Found</div>
+      <div className="h-screen flex flex-col items-center py-10">
+        <div>
+          <Image src="/assets/images/logo.png" width={540} height={72} />
+        </div>
+        <div className="flex flex-col h-screen justify-center items-center space-y-10 md:space-y-20">
+          <div className="w-80 h-80 md:w-96 md:h-96 border-8 border-zinc-900 rounded-full items-center justify-center flex flex-col">
+            <div className="space-y-5 text-center">
+              <div className="text-6xl md:text-8xl italic">404</div>
+              <div className="text-5xl md:text-6xl">Not Found</div>
             </div>
           </div>
-        </div>
-        <div className="text-3xl mt-10">
-          The page you're looking for is not found.
+          <div className="text-2xl md:text-3xl space-y-5 text-center">
+            <div>The page you're looking for is not found.</div>
+            <div className="text-blue-900">
+              <Link href="/">Go to homepage</Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
