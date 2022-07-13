@@ -7,7 +7,7 @@ export default function DefaultLayout({ children }) {
   return (
     <>
       <Navbar />
-      <div className="block md:hidden my-5 text-center">
+      <div className="block md:hidden mt-5 text-center">
         <Image
           src="/assets/images/logo.png"
           alt="rixusart-cat"
