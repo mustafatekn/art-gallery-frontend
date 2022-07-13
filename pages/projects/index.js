@@ -6,9 +6,9 @@ import Head from "next/head";
 
 export default function Projects({ projects }) {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Projects">
       <Head>
-        <title>Rixusart | Projects</title>
+        <title>Projects | Rixusart</title>
       </Head>
       <div className="container flex flex-col mx-auto text-center">
         {projects?.map((project) => (

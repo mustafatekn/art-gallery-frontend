@@ -3,7 +3,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 
 export default function Contact() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Contact">
       <Head>
         <title>Contact | Rixusart</title>
       </Head>
