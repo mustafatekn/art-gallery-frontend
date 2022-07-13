@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import styles from "./DefaultLayout.module.css";
+import styles from "../styles/DefaultLayout.module.css";
 import Image from "next/image";
 
 export default function DefaultLayout({ children, title }) {
@@ -17,9 +17,11 @@ export default function DefaultLayout({ children, title }) {
         />
       </div>
       <main id={styles.contentWrapper}>
-        {title && <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
-          <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
-        </div>}
+        {title && (
+          <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
+            <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+          </div>
+        )}
         {children}
       </main>
       <Footer />
