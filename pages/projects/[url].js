@@ -37,7 +37,7 @@ export default function ProjectDetails({ project }) {
             <div className="flex flex-col gap-12 w-full h-full">
               <img
                 src={img.url}
-                className="object-center object-cover w-full h-full"
+                className="object-center object-cover w-full h-full rounded-sm"
                 alt={img.explanation}
               />
             </div>
