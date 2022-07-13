@@ -17,9 +17,11 @@ export default function DefaultLayout({ children, title }) {
         />
       </div>
       <main id={styles.contentWrapper}>
-        {title && <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
-          <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
-        </div>}
+        {title && (
+          <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
+            <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+          </div>
+        )}
         {children}
       </main>
       <Footer />
