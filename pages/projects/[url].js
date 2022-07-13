@@ -15,7 +15,7 @@ export default function ProjectDetails({ project }) {
             alt={project.thumbnail.explanation}
             className="object-fill w-full h-auto"
             loading="lazy"
-            style={{maxHeight:700}}
+            style={{maxHeight:600}}
           />
         </div>
       </div>
