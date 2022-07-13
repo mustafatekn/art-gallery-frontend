@@ -17,6 +17,10 @@ export const projectData = [
         url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
         explanation: "profile-image",
       },
+      {
+        url: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+        explanation: "tree"
+      }
     ],
     thumbnail: {
       url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",

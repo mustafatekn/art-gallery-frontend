@@ -3,12 +3,12 @@ import DefaultLayout from "../layouts/DefaultLayout";
 
 export default function Contact() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Contact">
       <Head>
         <title>Contact | Rixusart</title>
       </Head>
       <div className="container mx-auto">
-        <div className="grid grid-rows-1 lg:mt-64">
+        <div className="grid grid-rows-1 lg:mt-28">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col text-base lg:text-xl font-semibold">
               <div className="w-full mx-auto px-4">

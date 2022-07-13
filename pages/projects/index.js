@@ -6,9 +6,9 @@ import Head from "next/head";
 
 export default function Projects({ projects }) {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Projects">
       <Head>
-        <title>Rixusart | Projects</title>
+        <title>Projects | Rixusart</title>
       </Head>
       <div className="container flex flex-col mx-auto text-center">
         {projects?.map((project) => (
@@ -22,8 +22,8 @@ export default function Projects({ projects }) {
                     src={project.thumbnail.url}
                     alt={project.thumbnail.explanation}
                     className="object-cover object-center hover:contrast-75"
-                    width={500}
-                    height={300}
+                    width={700}
+                    height={400}
                     unoptimized
                   />
                 </a>

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import styles from "./DefaultLayout.module.css";
 import Image from "next/image";
 
-export default function DefaultLayout({ children }) {
+export default function DefaultLayout({ children, title }) {
   return (
     <>
       <Navbar />
@@ -16,7 +16,12 @@ export default function DefaultLayout({ children }) {
           className="object-cover object-center"
         />
       </div>
-      <main id={styles.contentWrapper}>{children}</main>
+      <main id={styles.contentWrapper}>
+        {title && <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
+          <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+        </div>}
+        {children}
+      </main>
       <Footer />
     </>
   );

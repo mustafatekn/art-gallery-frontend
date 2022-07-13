@@ -6,7 +6,7 @@ export default function ProjectDetails({ project }) {
   return (
     <DefaultLayout>
       <Head>
-        <title>{project.title}</title>
+        <title>{project.title} | Rixusart</title>
       </Head>
       <div className="mx-auto w-full">
         <div className="flex justify-center">
@@ -15,7 +15,7 @@ export default function ProjectDetails({ project }) {
             alt={project.thumbnail.explanation}
             className="object-fill w-full h-auto"
             loading="lazy"
-            style={{maxHeight:700}}
+            style={{maxHeight:600}}
           />
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Rixusart | Not Found</title>
+        <title>Not Found | Rixusart</title>
       </Head>
       <div className="flex flex-col">
         <div className="flex flex-col items-center">
