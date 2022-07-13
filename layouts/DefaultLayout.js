@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import styles from "./DefaultLayout.module.css";
+import styles from "../styles/DefaultLayout.module.css";
 import Image from "next/image";
 
 export default function DefaultLayout({ children, title }) {
