@@ -24,7 +24,7 @@ export default function Projects({ projects }) {
                       loader={() => project.thumbnail.url}
                       src={project.thumbnail.url}
                       alt={project.thumbnail.explanation}
-                      className="object-cover object-center filter hover:grayscale-0  hover:brightness-50 ease-in-out duration-700"
+                      className="object-cover object-center filter hover:grayscale-0  hover:brightness-50 ease-in-out duration-700 rounded-sm"
                       width={700}
                       height={500}
                       unoptimized
