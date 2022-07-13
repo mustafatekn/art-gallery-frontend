@@ -14,7 +14,9 @@ export default function Projects({ projects }) {
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-x-20 gap-y-10">
           {projects?.map((project) => (
             <div className="mx-auto px-5 xl:px-0" key={project.id}>
-              <div className="font-medium text-lg mb-2 text-center lg:text-start">{project.title}</div>
+              <div className="font-medium text-lg mb-2 text-center lg:text-start">
+                {project.title}
+              </div>
               <div>
                 <Link href={`/projects/${project.url}`}>
                   <a>
@@ -22,7 +24,7 @@ export default function Projects({ projects }) {
                       loader={() => project.thumbnail.url}
                       src={project.thumbnail.url}
                       alt={project.thumbnail.explanation}
-                      className="object-cover object-center hover:contrast-75"
+                      className="object-cover object-center filter hover:grayscale-0  hover:brightness-50 ease-in-out duration-700"
                       width={700}
                       height={500}
                       unoptimized
