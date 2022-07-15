@@ -6,7 +6,7 @@ export default function ProjectDetails({ project }) {
   return (
     <DefaultLayout>
       <Head>
-        <title>{project.title} | Rixusart</title>
+      <title>{`${project.title} | Rixusart`}</title>
       </Head>
       <div className="mx-auto w-full">
         <div className="flex justify-center">
