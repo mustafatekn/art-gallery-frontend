@@ -20,14 +20,16 @@ export default function ProjectDetails({ project }) {
 
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white">
+          <button
+            className="float-right mt-2 mr-3 font-semibold"
+            onClick={() => setShow(false)}
+          >
+            <svg role="img" className="w-5 h-5 text-primary-black">
+              <use xlinkHref="/assets/icons/sprite.svg#close" />
+            </svg>
+          </button>
           <div className="w-4/5 mx-auto h-screen">
-            <button
-              className="float-right mr-2 font-semibold"
-              onClick={() => setShow(false)}
-            >
-              x
-            </button>
-            <div className="py-5 w-full h-full">
+            <div className="py-10 w-full h-full">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
