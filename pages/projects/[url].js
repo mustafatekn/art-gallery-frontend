@@ -2,10 +2,13 @@ import { useState } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+//eslint-disable-next-line
 import "swiper/css";
+//eslint-disable-next-line
 import "swiper/css/navigation";
+//eslint-disable-next-line
 import "swiper/css/pagination";
 
 export default function ProjectDetails({ project }) {
