@@ -104,7 +104,7 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex" style={{ height: 680 }}>
+          <div className="mx-auto w-full flex h-[700px]">
             <div className="w-full h-full relative">
               <Image
                 src={project.thumbnail.url}
