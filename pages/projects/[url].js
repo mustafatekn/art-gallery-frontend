@@ -34,19 +34,19 @@ export default function ProjectDetails({ project }) {
             </svg>
           </button>
           <div className="w-full mx-auto h-full px-2">
-          <div className="flex justify-center my-5">
-            <Link href="/">
-              <a>
-                <Image
-                  src="/assets/images/logo.png"
-                  width={270}
-                  height={36}
-                  alt="Rixusart Logo"
-                  className="h-6 sm:h-9"
-                />
-              </a>
-            </Link>
-          </div>
+            <div className="flex justify-center my-5">
+              <Link href="/">
+                <a>
+                  <Image
+                    src="/assets/images/logo.png"
+                    width={270}
+                    height={36}
+                    alt="Rixusart Logo"
+                    className="h-6 sm:h-9"
+                  />
+                </a>
+              </Link>
+            </div>
             <div className="w-full flex flex-col justify-center my-5 h-full pb-40">
               <Swiper
                 modules={[Navigation, Pagination]}
@@ -64,16 +64,16 @@ export default function ProjectDetails({ project }) {
                 initialSlide={initialIndex}
               >
                 <div>
-                {project?.images?.map((img, index) => (
-                  <SwiperSlide key={index} className="w-full h-full">
-                    <Image
-                      src={img.url}
-                      className="object-contain rounded-sm border border-slate-400"
-                      layout="fill"
-                      alt={img.description}
-                    />
-                  </SwiperSlide>
-                ))}
+                  {project?.images?.map((img, index) => (
+                    <SwiperSlide key={index} className="w-full h-full">
+                      <Image
+                        src={img.url}
+                        className="object-contain rounded-sm border border-slate-400"
+                        layout="fill"
+                        alt={img.description}
+                      />
+                    </SwiperSlide>
+                  ))}
                 </div>
                 <div className="flex mx-auto">
                   <div className="left-0 z-10 flex items-center absolute inset-y-0">
@@ -138,15 +138,15 @@ export default function ProjectDetails({ project }) {
               <div
                 className={
                   index > 2
-                    ? "flex-col col-span-4 lg:flex my-12 lg:my-0 w-full"
-                    : "flex-col col-span-4 lg:flex mb-12 lg:mb-0 w-full"
+                    ? "flex-col col-span-4 lg:flex my-12 lg:my-0 w-full h-full"
+                    : "flex-col col-span-4 lg:flex mb-12 lg:mb-0 w-full h-full"
                 }
                 key={img.url}
               >
-                <div className="flex flex-col gap-12 w-full">
+                <div className="flex flex-col gap-12 w-full h-full">
                   <img
                     src={img.url}
-                    className="object-center object-cover w-full rounded-sm cursor-pointer"
+                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
                     alt={img.description}
                     onClick={() => {
                       setInitialIndex(index);
