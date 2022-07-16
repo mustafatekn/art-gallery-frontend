@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.swiper-pagination-bullet {
+  background-color: grey !important;
+  border:1px solid grey;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
