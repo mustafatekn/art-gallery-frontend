@@ -10,7 +10,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 //eslint-disable-next-line
 import "swiper/css/pagination";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ProjectDetails({ project }) {
