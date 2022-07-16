@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 
 export default function ProjectDetails({ project }) {
   const [show, setShow] = useState(false);
+  const [initialIndex, setInitialIndex] = useState(0);
 
   return (
     <DefaultLayout>
@@ -38,6 +39,7 @@ export default function ProjectDetails({ project }) {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
                 className="h-full"
+                initialSlide={initialIndex}
               >
                 {project?.images?.map((img, index) => (
                   <SwiperSlide key={index}>
@@ -85,7 +87,10 @@ export default function ProjectDetails({ project }) {
                     src={img.url}
                     className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
                     alt={img.explanation}
-                    onClick={() => setShow(true)}
+                    onClick={() => {
+                      setInitialIndex(index);
+                      setShow(true)
+                    }}
                   />
                 </div>
               </div>
