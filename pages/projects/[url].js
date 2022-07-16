@@ -22,12 +22,12 @@ export default function ProjectDetails({ project }) {
       </Head>
 
       {show ? (
-        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-black">
+        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white">
           <button
             className="float-right mt-2 mr-3 font-semibold"
             onClick={() => setShow(false)}
           >
-            <svg role="img" className="w-6 h-6" fill="white">
+            <svg role="img" className="w-6 h-6">
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
@@ -36,11 +36,11 @@ export default function ProjectDetails({ project }) {
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
-                navigation
+                // navigation
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
-                className="h-full"
+                className="h-full flex flex-col relative overflow-hidden"
                 initialSlide={initialIndex}
               >
                 {project?.images?.map((img, index) => (
@@ -52,6 +52,32 @@ export default function ProjectDetails({ project }) {
                     />
                   </SwiperSlide>
                 ))}
+                <div className="flex mx-auto">
+                  <div className="left-0 z-10 flex items-center mx-3 lg:absolute lg:inset-y-0 lg:mx-0">
+                    <button
+                      // ref={prevRef}
+                      //   @click="swiper.slidePrev()"
+                      className="slider-arrow"
+                    >
+                      <span className="sr-only">Prev</span>
+                      <svg role="img" className="w-10 h-10 text-gray-900">
+                        <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="inset-y-0 right-0 z-10 flex items-center mx-3 lg:absolute lg:mx-0">
+                    <button
+                      //   @click="swiper.slideNext()"
+                      // ref={nextRef}
+                      className="slider-arrow"
+                    >
+                      <span className="sr-only">Next</span>
+                      <svg role="img" className="w-10 h-10">
+                        <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </Swiper>
             </div>
           </div>
@@ -91,7 +117,7 @@ export default function ProjectDetails({ project }) {
                     alt={img.explanation}
                     onClick={() => {
                       setInitialIndex(index);
-                      setShow(true)
+                      setShow(true);
                     }}
                   />
                 </div>
@@ -100,6 +126,12 @@ export default function ProjectDetails({ project }) {
           </div>
         </>
       )}
+      <style jsx>{`
+        .swiper-button-prev {
+          color: "black";
+          background: "black";
+        }
+      `}</style>
     </DefaultLayout>
   );
 }
