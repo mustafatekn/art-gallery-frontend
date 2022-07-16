@@ -62,7 +62,8 @@ export default function ProjectDetails({ project }) {
                   <div className="left-0 z-10 flex items-center mx-3 lg:absolute lg:inset-y-0 lg:mx-0">
                     <button
                       ref={prevButton}
-                      className="slider-arrow"
+                      className="slider-arrow disabled:opacity-50"
+                      disabled={initialIndex === 0}
                     >
                       <span className="sr-only">Prev</span>
                       <svg role="img" className="w-12 h-12 text-gray-900">
@@ -73,7 +74,8 @@ export default function ProjectDetails({ project }) {
                   <div className="inset-y-0 right-0 z-10 flex items-center mx-3 lg:absolute lg:mx-0">
                     <button
                       ref={nextButton}
-                      className="slider-arrow"
+                      className="slider-arrow  disabled:opacity-50"
+                      disabled={initialIndex === project.images.length - 1}
                     >
                       <span className="sr-only">Next</span>
                       <svg role="img" className="w-12 h-12">
