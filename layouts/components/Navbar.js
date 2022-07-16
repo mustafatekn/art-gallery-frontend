@@ -73,7 +73,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-50 block md:hidden">
+        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-40 block md:hidden">
           <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
             <div className="flex self-start items-center">
               <Link href="/">
