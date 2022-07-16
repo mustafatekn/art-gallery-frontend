@@ -44,7 +44,7 @@ export default function ProjectDetails({ project }) {
                   <SwiperSlide key={index}>
                     <img
                       src={img.url}
-                      className="object-center object-cover w-full h-full rounded-sm"
+                      className="object-center object-cover w-full h-full rounded-sm border border-slate-400"
                       alt={img.explanation}
                     />
                   </SwiperSlide>
