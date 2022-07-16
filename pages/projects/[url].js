@@ -65,7 +65,7 @@ export default function ProjectDetails({ project }) {
                       className="slider-arrow"
                     >
                       <span className="sr-only">Prev</span>
-                      <svg role="img" className="w-10 h-10 text-gray-900">
+                      <svg role="img" className="w-12 h-12 text-gray-900">
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
                       </svg>
                     </button>
@@ -76,7 +76,7 @@ export default function ProjectDetails({ project }) {
                       className="slider-arrow"
                     >
                       <span className="sr-only">Next</span>
-                      <svg role="img" className="w-10 h-10">
+                      <svg role="img" className="w-12 h-12">
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
                       </svg>
                     </button>
