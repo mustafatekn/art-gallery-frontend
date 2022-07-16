@@ -26,7 +26,7 @@ export default function ProjectDetails({ project }) {
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
           <button
-            className="float-right mt-2 mr-3 font-semibold"
+            className="float-right mt-3 mr-2 font-semibold"
             onClick={() => setShow(false)}
           >
             <svg role="img" className="w-6 h-6">
@@ -104,7 +104,7 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[700px]">
+          <div className="mx-auto w-full flex h-[350px] md:h-[700px]">
             <div className="w-full h-full relative">
               <Image
                 src={project.thumbnail.url}
