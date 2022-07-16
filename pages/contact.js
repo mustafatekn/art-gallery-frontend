@@ -8,7 +8,7 @@ export default function Contact() {
         <title>Contact | Rixusart</title>
       </Head>
       <div className="container mx-auto">
-        <div className="grid grid-rows-1 lg:mt-16">
+        <div className="grid grid-rows-1 my-4 lg:mt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col text-base lg:text-xl font-semibold">
               <div className="w-full mx-auto px-4">
