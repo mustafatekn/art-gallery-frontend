@@ -104,14 +104,14 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full">
-            <div className="flex justify-center">
-              <img
+          <div className="mx-auto w-full flex" style={{ height: 680 }}>
+            <div className="w-full h-full relative">
+              <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
-                className="object-fill w-full h-auto"
                 loading="lazy"
-                style={{ maxHeight: 600 }}
+                layout="fill"
+                objectFit="fill"
               />
             </div>
           </div>
