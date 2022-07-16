@@ -2,7 +2,7 @@ import { useState } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
