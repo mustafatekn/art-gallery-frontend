@@ -8,7 +8,7 @@ export default function Contact() {
         <title>Contact | Rixusart</title>
       </Head>
       <div className="container mx-auto">
-        <div className="grid grid-rows-1 lg:mt-28">
+        <div className="grid grid-rows-1 my-4 lg:mt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col text-base lg:text-xl font-semibold">
               <div className="w-full mx-auto px-4">
@@ -51,6 +51,22 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <input
+                    type="email"
+                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div className="form-input-wrapper w-full mt-5">
+                  <input
+                    type="text"
+                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    placeholder="Phone"
+                  />
+                </div>
+
+                <div className="form-input-wrapper w-full mt-5">
+                  <input
                     type="text"
                     className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
                     placeholder="Subject"
@@ -65,7 +81,7 @@ export default function Contact() {
                 </div>
                 <div className="form-input-wrapper w-full">
                   <button className="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded w-full mt-3">
-                    Submit
+                    Send Message
                   </button>
                 </div>
               </form>

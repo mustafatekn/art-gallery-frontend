@@ -10,7 +10,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 //eslint-disable-next-line
 import "swiper/css/pagination";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ProjectDetails({ project }) {
@@ -26,7 +25,7 @@ export default function ProjectDetails({ project }) {
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
           <button
-            className="float-right mt-2 mr-3 font-semibold"
+            className="float-right mt-3 mr-2 font-semibold"
             onClick={() => setShow(false)}
           >
             <svg role="img" className="w-6 h-6">
@@ -34,20 +33,7 @@ export default function ProjectDetails({ project }) {
             </svg>
           </button>
           <div className="w-full mx-auto h-full px-2">
-            <div className="flex justify-center my-5">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/assets/images/logo.png"
-                    width={270}
-                    height={36}
-                    alt="Rixusart Logo"
-                    className="h-6 sm:h-9"
-                  />
-                </a>
-              </Link>
-            </div>
-            <div className="w-full flex flex-col justify-center my-5 h-full pb-40">
+            <div className="w-full flex flex-col justify-center h-full pb-16">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
@@ -117,14 +103,14 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full">
-            <div className="flex justify-center">
-              <img
+          <div className="mx-auto w-full flex h-[350px] md:h-[700px]">
+            <div className="w-full h-full relative">
+              <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
-                className="object-fill w-full h-auto"
                 loading="lazy"
-                style={{ maxHeight: 600 }}
+                layout="fill"
+                objectFit="fill"
               />
             </div>
           </div>

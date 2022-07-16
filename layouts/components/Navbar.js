@@ -89,7 +89,7 @@ export default function Navbar() {
               </Link>
             </div>
             <button
-              className="flex items-center mr-1"
+              className="flex flex-col mr-2 justify-start mt-1"
               onClick={() => setOpen(false)}
             >
               <svg role="img" className="w-6 h-6 ml-auto">
