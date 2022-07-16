@@ -65,7 +65,7 @@ export default function ProjectDetails({ project }) {
                       disabled={initialIndex === 0}
                     >
                       <span className="sr-only">Prev</span>
-                      <svg role="img" className="w-12 h-12 text-gray-900">
+                      <svg role="img" className="w-12 h-12 text-gray-900" stroke="grey" strokeWidth={0.1}>
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
                       </svg>
                     </button>
@@ -77,7 +77,7 @@ export default function ProjectDetails({ project }) {
                       disabled={initialIndex === project.images.length - 1}
                     >
                       <span className="sr-only">Next</span>
-                      <svg role="img" className="w-12 h-12">
+                      <svg role="img" className="w-12 h-12" stroke="grey" strokeWidth={0.2}>
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
                       </svg>
                     </button>
