@@ -21,7 +21,6 @@ export default function ProjectDetails({ project }) {
       <Head>
         <title>{`${project.title} | Rixusart`}</title>
       </Head>
-
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white">
           <button
@@ -132,12 +131,6 @@ export default function ProjectDetails({ project }) {
           </div>
         </>
       )}
-      <style jsx>{`
-        .swiper-button-prev {
-          color: "black";
-          background: "black";
-        }
-      `}</style>
     </DefaultLayout>
   );
 }
