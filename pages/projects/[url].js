@@ -34,20 +34,7 @@ export default function ProjectDetails({ project }) {
             </svg>
           </button>
           <div className="w-full mx-auto h-full px-2">
-            <div className="flex justify-center my-5">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/assets/images/logo.png"
-                    width={270}
-                    height={36}
-                    alt="Rixusart Logo"
-                    className="h-6 sm:h-9"
-                  />
-                </a>
-              </Link>
-            </div>
-            <div className="w-full flex flex-col justify-center my-5 h-full pb-40">
+            <div className="w-full flex flex-col justify-center h-full pb-16">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
