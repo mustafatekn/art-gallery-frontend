@@ -7,7 +7,7 @@ export const projectData = [
     images: [
       {
         url: "https://www.thoughtco.com/thmb/VG5-1LGCmdWyW23Uf7Vr-R_5tqk=/3504x2336/filters:fill(auto,1)/GettyImages-116248249-5be59c3cc9e77c00514fed87.jpg",
-        explanation: "link",
+        description: "link",
       },
       {
         url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
@@ -15,16 +15,16 @@ export const projectData = [
       },
       {
         url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-        explanation: "profile-image",
+        description: "profile-image",
       },
       {
         url: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-        explanation: "tree",
+        description: "tree",
       },
     ],
     thumbnail: {
       url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
-      explanation: "girl",
+      description: "girl",
     },
     url: "first-project",
   },
@@ -36,7 +36,7 @@ export const projectData = [
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
-        explanation: "butterfly",
+        description: "butterfly",
       },
       {
         url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
@@ -44,12 +44,12 @@ export const projectData = [
       },
       {
         url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-        explanation: "profile-image",
+        description: "profile-image",
       },
     ],
     thumbnail: {
       url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
-      explanation: "butterfly",
+      description: "butterfly",
     },
     url: "second-project",
   },
@@ -61,7 +61,7 @@ export const projectData = [
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
-        explanation: "butterfly",
+        description: "butterfly",
       },
       {
         url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
@@ -69,12 +69,12 @@ export const projectData = [
       },
       {
         url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-        explanation: "profile-image",
+        description: "profile-image",
       },
     ],
     thumbnail: {
       url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      explanation: "profile-image",
+      description: "profile-image",
     },
     url: "third-project",
   },
@@ -86,7 +86,7 @@ export const projectData = [
     images: [
       {
         url: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
-        explanation: "butterfly",
+        description: "butterfly",
       },
       {
         url: "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
@@ -94,16 +94,16 @@ export const projectData = [
       },
       {
         url: "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-        explanation: "profile-image",
+        description: "profile-image",
       },
       {
         url: "https://www.thoughtco.com/thmb/VG5-1LGCmdWyW23Uf7Vr-R_5tqk=/3504x2336/filters:fill(auto,1)/GettyImages-116248249-5be59c3cc9e77c00514fed87.jpg",
-        explanation: "link",
+        description: "link",
       },
     ],
     thumbnail: {
       url: "https://www.thoughtco.com/thmb/VG5-1LGCmdWyW23Uf7Vr-R_5tqk=/3504x2336/filters:fill(auto,1)/GettyImages-116248249-5be59c3cc9e77c00514fed87.jpg",
-      explanation: "link",
+      description: "link",
     },
     url: "fourth-project",
   },

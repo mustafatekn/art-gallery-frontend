@@ -53,7 +53,7 @@ export default function ProjectDetails({ project }) {
                     <img
                       src={img.url}
                       className="object-center object-cover w-full h-full rounded-sm border border-slate-400"
-                      alt={img.explanation}
+                      alt={img.description}
                     />
                   </SwiperSlide>
                 ))}
@@ -93,7 +93,7 @@ export default function ProjectDetails({ project }) {
             <div className="flex justify-center">
               <img
                 src={project.thumbnail.url}
-                alt={project.thumbnail.explanation}
+                alt={project.thumbnail.description}
                 className="object-fill w-full h-auto"
                 loading="lazy"
                 style={{ maxHeight: 600 }}
@@ -119,7 +119,7 @@ export default function ProjectDetails({ project }) {
                   <img
                     src={img.url}
                     className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
-                    alt={img.explanation}
+                    alt={img.description}
                     onClick={() => {
                       setInitialIndex(index);
                       setShow(true);
