@@ -51,6 +51,22 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <input
+                    type="email"
+                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div className="form-input-wrapper w-full mt-5">
+                  <input
+                    type="text"
+                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    placeholder="Phone"
+                  />
+                </div>
+
+                <div className="form-input-wrapper w-full mt-5">
+                  <input
                     type="text"
                     className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
                     placeholder="Subject"
