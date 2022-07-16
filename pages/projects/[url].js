@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 //eslint-disable-next-line
 import "swiper/css/pagination";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectDetails({ project }) {
   const [show, setShow] = useState(false);
@@ -22,7 +24,7 @@ export default function ProjectDetails({ project }) {
         <title>{`${project.title} | Rixusart`}</title>
       </Head>
       {show ? (
-        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white">
+        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
           <button
             className="float-right mt-2 mr-3 font-semibold"
             onClick={() => setShow(false)}
@@ -31,8 +33,21 @@ export default function ProjectDetails({ project }) {
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
-          <div className="w-4/5 mx-auto md:h-screen">
-            <div className="py-10 w-full h-full">
+          <div className="w-4/5 mx-auto h-full">
+          <div className="flex justify-center my-5">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/images/logo.png"
+                  width={270}
+                  height={36}
+                  alt="Rixusart Logo"
+                  className="h-6 sm:h-9"
+                />
+              </a>
+            </Link>
+          </div>
+            <div className="w-full justify-center my-5 h-full pb-40">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
@@ -45,39 +60,50 @@ export default function ProjectDetails({ project }) {
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
-                className="h-full flex flex-col relative overflow-hidden"
+                className="flex flex-col relative overflow-hidden w-full h-full"
                 initialSlide={initialIndex}
               >
                 {project?.images?.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <img
+                  <SwiperSlide key={index} className="w-full h-full">
+                    <Image
                       src={img.url}
-                      className="object-center object-cover w-full h-full rounded-sm border border-slate-400"
+                      className="object-center object-cover rounded-sm border border-slate-400"
+                      layout="fill"
                       alt={img.description}
                     />
                   </SwiperSlide>
                 ))}
                 <div className="flex mx-auto">
-                  <div className="left-0 z-10 flex items-center mx-3 lg:absolute lg:inset-y-0 lg:mx-0">
+                  <div className="left-0 z-10 flex items-center absolute inset-y-0">
                     <button
                       ref={prevButton}
                       className="slider-arrow disabled:opacity-50"
                       disabled={initialIndex === 0}
                     >
                       <span className="sr-only">Prev</span>
-                      <svg role="img" className="w-12 h-12 text-gray-900" stroke="grey" strokeWidth={0.1}>
+                      <svg
+                        role="img"
+                        className="w-12 h-12 text-gray-900"
+                        stroke="grey"
+                        strokeWidth={0.1}
+                      >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
                       </svg>
                     </button>
                   </div>
-                  <div className="inset-y-0 right-0 z-10 flex items-center mx-3 lg:absolute lg:mx-0">
+                  <div className="inset-y-0 right-0 z-10 flex items-center absolute">
                     <button
                       ref={nextButton}
                       className="slider-arrow  disabled:opacity-50"
                       disabled={initialIndex === project.images.length - 1}
                     >
                       <span className="sr-only">Next</span>
-                      <svg role="img" className="w-12 h-12" stroke="grey" strokeWidth={0.2}>
+                      <svg
+                        role="img"
+                        className="w-12 h-12"
+                        stroke="grey"
+                        strokeWidth={0.2}
+                      >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
                       </svg>
                     </button>
@@ -110,15 +136,15 @@ export default function ProjectDetails({ project }) {
               <div
                 className={
                   index > 2
-                    ? "flex-col col-span-4 lg:flex my-12 lg:my-0 w-full h-full"
-                    : "flex-col col-span-4 lg:flex mb-12 lg:mb-0 w-full h-full"
+                    ? "flex-col col-span-4 lg:flex my-12 lg:my-0 w-full"
+                    : "flex-col col-span-4 lg:flex mb-12 lg:mb-0 w-full"
                 }
                 key={img.url}
               >
-                <div className="flex flex-col gap-12 w-full h-full">
+                <div className="flex flex-col gap-12 w-full">
                   <img
                     src={img.url}
-                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
+                    className="object-center object-cover w-full rounded-sm cursor-pointer"
                     alt={img.description}
                     onClick={() => {
                       setInitialIndex(index);
