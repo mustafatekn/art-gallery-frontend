@@ -33,7 +33,7 @@ export default function ProjectDetails({ project }) {
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
-          <div className="w-4/5 mx-auto h-full">
+          <div className="w-full mx-auto h-full px-2">
           <div className="flex justify-center my-5">
             <Link href="/">
               <a>
@@ -47,7 +47,7 @@ export default function ProjectDetails({ project }) {
               </a>
             </Link>
           </div>
-            <div className="w-full justify-center my-5 h-full pb-40">
+            <div className="w-full flex flex-col justify-center my-5 h-full pb-40">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
@@ -60,19 +60,21 @@ export default function ProjectDetails({ project }) {
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
-                className="flex flex-col relative overflow-hidden w-full h-full"
+                className="flex flex-col relative overflow-hidden w-full h-full self-center items-center justify-center"
                 initialSlide={initialIndex}
               >
+                <div>
                 {project?.images?.map((img, index) => (
                   <SwiperSlide key={index} className="w-full h-full">
                     <Image
                       src={img.url}
-                      className="object-center object-cover rounded-sm border border-slate-400"
+                      className="object-contain rounded-sm border border-slate-400"
                       layout="fill"
                       alt={img.description}
                     />
                   </SwiperSlide>
                 ))}
+                </div>
                 <div className="flex mx-auto">
                   <div className="left-0 z-10 flex items-center absolute inset-y-0">
                     <button
