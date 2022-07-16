@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
@@ -14,7 +14,8 @@ import "swiper/css/pagination";
 export default function ProjectDetails({ project }) {
   const [show, setShow] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
-
+  const prevButton = useRef(null);
+  const nextButton = useRef(null);
   return (
     <DefaultLayout>
       <Head>
@@ -36,7 +37,12 @@ export default function ProjectDetails({ project }) {
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
-                // navigation
+                onInit={(swiper) => {
+                  swiper.params.navigation.prevEl = prevButton.current;
+                  swiper.params.navigation.nextEl = nextButton.current;
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
@@ -55,8 +61,7 @@ export default function ProjectDetails({ project }) {
                 <div className="flex mx-auto">
                   <div className="left-0 z-10 flex items-center mx-3 lg:absolute lg:inset-y-0 lg:mx-0">
                     <button
-                      // ref={prevRef}
-                      //   @click="swiper.slidePrev()"
+                      ref={prevButton}
                       className="slider-arrow"
                     >
                       <span className="sr-only">Prev</span>
@@ -67,8 +72,7 @@ export default function ProjectDetails({ project }) {
                   </div>
                   <div className="inset-y-0 right-0 z-10 flex items-center mx-3 lg:absolute lg:mx-0">
                     <button
-                      //   @click="swiper.slideNext()"
-                      // ref={nextRef}
+                      ref={nextButton}
                       className="slider-arrow"
                     >
                       <span className="sr-only">Next</span>
