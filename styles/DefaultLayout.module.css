@@ -1,10 +1,5 @@
-#contentWrapper {
-  margin-bottom: 96px;
-}
-
 @media screen and (min-width: 769px) {
   #contentWrapper {
     margin-top: 92px;
-    margin-bottom: 96px;
   }
 }
