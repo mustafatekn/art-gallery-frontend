@@ -103,7 +103,7 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[350px] md:h-[700px] mb-10">
+          <div className="mx-auto w-full flex h-[350px] md:h-[700px] mb-10 md:mb-16 px-5 md:px-0">
             <div className="w-full h-full relative filter ease-in-out duration-700">
               <Image
                 src={project.thumbnail.url}
