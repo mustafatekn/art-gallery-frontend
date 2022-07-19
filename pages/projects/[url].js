@@ -108,14 +108,15 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[350px] md:h-[700px] mb-10 md:mb-16 px-5 md:px-0">
-            <div className="w-full h-full relative filter ease-in-out duration-700">
+          <div className="mx-auto w-full flex h-[300px] md:h-[500px] xl:h-[600px] 2xl:h-[750px] mb-10 md:mb-16">
+            <div className="w-full relative filter ease-in-out duration-700">
               <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
                 loading="lazy"
                 layout="fill"
                 objectFit="fill"
+                objectPosition="center"
               />
               <div className="w-full h-full mx-auto text-center absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
                 <h2 className="font-extrabold text-5xl ">{project.title}</h2>
@@ -137,7 +138,7 @@ export default function ProjectDetails({ project }) {
                 <div className="flex flex-col gap-12 w-full h-full">
                   <img
                     src={img.url}
-                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
+                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer filter ease-in-out duration-700 hover:brightness-50 hover:grayscale-0"
                     alt={img.description}
                     onClick={() => {
                       setInitialIndex(index);
