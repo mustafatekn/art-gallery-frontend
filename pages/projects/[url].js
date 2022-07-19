@@ -25,15 +25,20 @@ export default function ProjectDetails({ project }) {
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
           <button
-            className="float-right mt-3 mr-2 font-semibold"
+            className="float-right mt-3 mr-2"
             onClick={() => setShow(false)}
           >
-            <svg role="img" className="w-6 h-6">
+            <svg
+              role="img"
+              className="w-7 h-7"
+              stroke="#fff"
+              strokeWidth={0.78}
+            >
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
           <div className="w-full mx-auto h-full px-2">
-            <div className="w-full flex flex-col justify-center h-full pb-16">
+            <div className="w-full flex flex-col justify-center h-full pb-20">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
@@ -71,9 +76,9 @@ export default function ProjectDetails({ project }) {
                       <span className="sr-only">Prev</span>
                       <svg
                         role="img"
-                        className="w-12 h-12 text-gray-900"
-                        stroke="grey"
-                        strokeWidth={0.1}
+                        className="w-14 h-14 text-gray-900"
+                        stroke="#fff"
+                        strokeWidth={0.78}
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
                       </svg>
@@ -88,9 +93,9 @@ export default function ProjectDetails({ project }) {
                       <span className="sr-only">Next</span>
                       <svg
                         role="img"
-                        className="w-12 h-12"
-                        stroke="grey"
-                        strokeWidth={0.2}
+                        className="w-14 h-14"
+                        stroke="#fff"
+                        strokeWidth={0.78}
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
                       </svg>
