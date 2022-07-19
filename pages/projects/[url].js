@@ -117,7 +117,7 @@ export default function ProjectDetails({ project }) {
                 layout="fill"
                 objectFit="fill"
               />
-              <div className="w-full h-full mx-auto text-center z-50 absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
+              <div className="w-full h-full mx-auto text-center absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
                 <h2 className="font-extrabold text-5xl ">{project.title}</h2>
                 <h6 className="font-bold text-4xl">{project.location}</h6>
                 <p className="font-semibold text-2xl">{project.text}</p>
