@@ -103,8 +103,8 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[350px] md:h-[700px]">
-            <div className="w-full h-full relative">
+          <div className="mx-auto w-full flex h-[350px] md:h-[700px] mb-10">
+            <div className="w-full h-full relative filter ease-in-out duration-700">
               <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
@@ -112,12 +112,12 @@ export default function ProjectDetails({ project }) {
                 layout="fill"
                 objectFit="fill"
               />
+              <div className="w-full h-full mx-auto text-center z-50 absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
+                <h2 className="font-extrabold text-5xl ">{project.title}</h2>
+                <h6 className="font-bold text-4xl">{project.location}</h6>
+                <p className="font-semibold text-2xl">{project.text}</p>
+              </div>
             </div>
-          </div>
-          <div className="container w-full mx-auto text-center my-10">
-            <h2 className="font-extrabold text-3xl ">{project.title}</h2>
-            <h6 className="font-bold text-2xl">{project.location}</h6>
-            <p className="font-semibold text-xl">{project.text}</p>
           </div>
           <div className="grid-cols-8 gap-12 lg:grid mx-5 lg:mx-12">
             {project?.images?.map((img, index) => (

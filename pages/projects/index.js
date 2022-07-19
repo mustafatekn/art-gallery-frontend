@@ -22,7 +22,7 @@ export default function Projects({ projects }) {
                       className="object-cover object-center w-full h-full rounded-sm"
                       loading="lazy"
                     />
-                    <div className="font-medium text-5xl duration-300 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 text-white absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center opacity-0 hover:opacity-100">
+                    <div className="font-medium text-5xl duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 text-white absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center opacity-0 hover:opacity-100">
                       {project.title}
                     </div>
                   </a>
