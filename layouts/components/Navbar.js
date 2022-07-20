@@ -89,11 +89,11 @@ export default function Navbar() {
               </Link>
             </div>
             <button
-              className="flex flex-col mr-2 justify-start mt-1"
+              className="flex flex-col mr-1 justify-start mt-1"
               onClick={() => setOpen(false)}
             >
-              <svg role="img" className="w-6 h-6 ml-auto">
-                <use xlinkHref="/assets/icons/sprite.svg#close" />
+              <svg role="img" className="w-7 h-7 ml-auto">
+                <use xlinkHref="/assets/icons/sprite.svg#close" stroke="#fff" strokeWidth={0.78}/>
               </svg>
             </button>
           </div>

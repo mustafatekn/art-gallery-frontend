@@ -10,9 +10,9 @@ export default function Contact() {
       <div className="container mx-auto">
         <div className="grid grid-rows-1 my-4 lg:mt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex flex-col text-base lg:text-xl font-semibold">
+            <div className="flex flex-col justify-center text-base lg:text-xl font-semibold">
               <div className="w-full mx-auto px-4">
-                <div className="w-full lg:w-4/5 mx-auto space-y-3">
+                <div className="w-full lg:w-4/5 mx-auto space-y-3 lg:mb-20">
                   <div>Benimle iletişime geçmekten çekinmeyin.</div>
                   <div>
                     <a href="mailto:emirteke04@gmail.com">
@@ -44,7 +44,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full">
                   <input
                     type="text"
-                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Name"
                   />
                 </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="email"
-                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Email"
                   />
                 </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="text"
-                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Phone"
                   />
                 </div>
@@ -68,14 +68,14 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="text"
-                    className="border border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Subject"
                   />
                 </div>
 
                 <div className="form-input-wrapper w-full mt-5">
                   <textarea
-                    className="border border-slate-200 w-full py-1.5 h-40 pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 h-40 pl-2 focus:outline-none"
                     placeholder="Message"
                   ></textarea>
                 </div>

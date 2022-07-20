@@ -23,17 +23,22 @@ export default function ProjectDetails({ project }) {
         <title>{`${project.title} | Rixusart`}</title>
       </Head>
       {show ? (
-        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
+        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-transparent h-screen mt-3 pb-7 backdrop-blur-sm">
           <button
-            className="float-right mt-3 mr-2 font-semibold"
+            className="float-right mr-2"
             onClick={() => setShow(false)}
           >
-            <svg role="img" className="w-6 h-6">
+            <svg
+              role="img"
+              className="w-7 h-7"
+              stroke="#fff"
+              strokeWidth={0.78}
+            >
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
-          <div className="w-full mx-auto h-full px-2">
-            <div className="w-full flex flex-col justify-center h-full pb-16">
+          <div className="w-full mx-auto h-full px-2 py-20 container">
+            <div className="w-full flex flex-col justify-center h-full">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
@@ -71,9 +76,9 @@ export default function ProjectDetails({ project }) {
                       <span className="sr-only">Prev</span>
                       <svg
                         role="img"
-                        className="w-12 h-12 text-gray-900"
-                        stroke="grey"
-                        strokeWidth={0.1}
+                        className="w-14 h-14 text-gray-900"
+                        stroke="#fff"
+                        strokeWidth={0.78}
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-left" />
                       </svg>
@@ -88,9 +93,9 @@ export default function ProjectDetails({ project }) {
                       <span className="sr-only">Next</span>
                       <svg
                         role="img"
-                        className="w-12 h-12"
-                        stroke="grey"
-                        strokeWidth={0.2}
+                        className="w-14 h-14"
+                        stroke="#fff"
+                        strokeWidth={0.78}
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#arrow-right" />
                       </svg>
@@ -103,21 +108,22 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[350px] md:h-[700px]">
-            <div className="w-full h-full relative">
+          <div className="mx-auto w-full flex h-[300px] md:h-[500px] xl:h-[600px] 2xl:h-[750px] mb-10 md:mb-16">
+            <div className="w-full relative filter ease-in-out duration-700">
               <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
                 loading="lazy"
                 layout="fill"
                 objectFit="fill"
+                objectPosition="center"
               />
+              <div className="w-full h-full mx-auto text-center absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
+                <h2 className="font-extrabold text-5xl ">{project.title}</h2>
+                <h6 className="font-bold text-4xl">{project.location}</h6>
+                <p className="font-semibold text-2xl">{project.text}</p>
+              </div>
             </div>
-          </div>
-          <div className="container w-full mx-auto text-center my-10">
-            <h2 className="font-extrabold text-3xl ">{project.title}</h2>
-            <h6 className="font-bold text-2xl">{project.location}</h6>
-            <p className="font-semibold text-xl">{project.text}</p>
           </div>
           <div className="grid-cols-8 gap-12 lg:grid mx-5 lg:mx-12">
             {project?.images?.map((img, index) => (
@@ -132,7 +138,7 @@ export default function ProjectDetails({ project }) {
                 <div className="flex flex-col gap-12 w-full h-full">
                   <img
                     src={img.url}
-                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer"
+                    className="object-center object-cover w-full h-full rounded-sm cursor-pointer filter ease-in-out duration-700 hover:brightness-50 hover:grayscale-0"
                     alt={img.description}
                     onClick={() => {
                       setInitialIndex(index);

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function DefaultLayout({ children, title }) {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <Navbar />
       <div className="block md:hidden mt-5 text-center">
         <Image
@@ -25,6 +25,6 @@ export default function DefaultLayout({ children, title }) {
         {children}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
