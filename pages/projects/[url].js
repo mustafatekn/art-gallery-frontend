@@ -23,9 +23,9 @@ export default function ProjectDetails({ project }) {
         <title>{`${project.title} | Rixusart`}</title>
       </Head>
       {show ? (
-        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-white h-screen">
+        <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-transparent h-screen mt-3 pb-7 backdrop-blur-sm">
           <button
-            className="float-right mt-3 mr-2"
+            className="float-right mr-2"
             onClick={() => setShow(false)}
           >
             <svg
@@ -37,8 +37,8 @@ export default function ProjectDetails({ project }) {
               <use xlinkHref="/assets/icons/sprite.svg#close" />
             </svg>
           </button>
-          <div className="w-full mx-auto h-full px-2">
-            <div className="w-full flex flex-col justify-center h-full pb-20">
+          <div className="w-full mx-auto h-full px-2 py-20 container">
+            <div className="w-full flex flex-col justify-center h-full">
               <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
