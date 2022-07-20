@@ -44,7 +44,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full">
                   <input
                     type="text"
-                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Name"
                   />
                 </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="email"
-                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Email"
                   />
                 </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="text"
-                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Phone"
                   />
                 </div>
@@ -68,14 +68,14 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full mt-5">
                   <input
                     type="text"
-                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 rounded-sm pl-2 focus:outline-none"
                     placeholder="Subject"
                   />
                 </div>
 
                 <div className="form-input-wrapper w-full mt-5">
                   <textarea
-                    className="border-b border-slate-200 w-full py-1.5 h-40 pl-2"
+                    className="border-b border-slate-200 w-full py-1.5 h-40 pl-2 focus:outline-none"
                     placeholder="Message"
                   ></textarea>
                 </div>
