@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="w-full  pb-2 bg-white z-40 flex flex-col flex-1 flex-grow justify-end">
+    <div className="w-full  pb-2 bg-white z-40 flex flex-col flex-1 flex-grow justify-end raleway-medium">
       <div className="container mx-auto bottom-0">
         <div className="flex justify-center mb-1">
           <a
@@ -37,7 +37,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="text-center w-full">
-          ©2022 by rixusart Ankara, Turkey
+          ©<span className="segoe">2022</span> by rixusart Ankara, Turkey
         </div>
       </div>
     </div>

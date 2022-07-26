@@ -13,8 +13,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white px-2 sm:px-4 py-6 border-b-2 fixed top-0 right-0 left-0 z-50 hidden md:block">
-        <div className="container flex flex-wrap justify-between items-center mx-auto font">
+      <nav className="bg-white px-2 sm:px-4 py-6 border-b-2 fixed top-0 right-0 left-0 z-50 hidden md:block raleway-medium">
+        <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link href="/" className="flex items-center">
             <a>
               <Image
@@ -73,7 +73,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-40 block md:hidden">
+        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-40 block md:hidden raleway-medium">
           <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
             <div className="flex self-start items-center">
               <Link href="/">
@@ -93,7 +93,11 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               <svg role="img" className="w-7 h-7 ml-auto">
-                <use xlinkHref="/assets/icons/sprite.svg#close" stroke="#fff" strokeWidth={0.78}/>
+                <use
+                  xlinkHref="/assets/icons/sprite.svg#close"
+                  stroke="#fff"
+                  strokeWidth={0.78}
+                />
               </svg>
             </button>
           </div>
