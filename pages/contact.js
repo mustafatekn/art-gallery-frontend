@@ -22,7 +22,7 @@ export default function Contact() {
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#email" />
                       </svg>
-                      emirteke04@gmail.com
+                      emirteke<span className="segoe">04</span>@gmail.com
                     </a>
                   </div>
                   <div>
@@ -33,13 +33,13 @@ export default function Contact() {
                       >
                         <use xlinkHref="/assets/icons/sprite.svg#phone" />
                       </svg>
-                      +90 538 050 8992
+                      <span className="segoe">+90 538 050 8992</span>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col mt-10 lg:mt-0 items-center lg:items-start px-4 2xl:w-4/5">
+            <div className="flex flex-col mt-10 lg:mt-0 items-center lg:items-start px-4 2xl:w-4/5 raleway-medium">
               <form className="w-full">
                 <div className="form-input-wrapper w-full">
                   <input

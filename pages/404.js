@@ -12,7 +12,7 @@ export default function NotFound() {
         <div className="flex flex-col items-center">
           <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 border-8 border-zinc-900 items-center justify-center flex flex-col my-10">
             <div className="text-center">
-              <div className="text-5xl sm:text-5xl md:text-9xl font-semibold">
+              <div className="text-5xl sm:text-5xl md:text-9xl font-semibold segoe">
                 404
               </div>
               <div className="text-4xl sm:text-5xl md:text-6xl font-semibold">
