@@ -67,8 +67,6 @@ export default function ProjectDetails({ project }) {
                   swiper.navigation.update();
                 }}
                 pagination={{ clickable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
                 className="flex flex-col relative overflow-hidden w-full h-full self-center items-center justify-center"
                 initialSlide={initialIndex}
               >
