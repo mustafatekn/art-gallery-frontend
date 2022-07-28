@@ -8,14 +8,14 @@ export default function Landing() {
       <Head>
         <title>Rixusart | Home</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="application-name" content="Rixusart" />
+        <meta name="Rixusart" content="Rixusart" />
         <meta
           name="description"
           content="Yağlı boya tablo, soyut resim, duvar resmi ve dekoratif boya gibi sanatın birçok dalından projeler"
         />
         <meta
           name="keywords"
-          content="Rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim"
+          content="Rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Anasayfa, Ana, Sayfa"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />

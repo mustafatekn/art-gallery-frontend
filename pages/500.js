@@ -8,7 +8,7 @@ export default function InternalServerError() {
       <Head>
         <title>Server Error | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="application-name" content="Rixusart" />
+        <meta name="Rixusart" content="Rixusart" />
         <meta
           name="description"
           content="Rixusart'a ulaşılamadı, server hatası"
