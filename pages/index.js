@@ -6,7 +6,21 @@ export default function Landing() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Rixusart</title>
+        <title>Rixusart | Home</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="application-name" content="Rixusart" />
+        <meta
+          name="description"
+          content="Yağlı boya tablo, soyut resim, duvar resmi ve dekoratif boya gibi sanatın birçok dalından projeler"
+        />
+        <meta
+          name="keywords"
+          content="Rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Mustafa Osman Tekin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="container mx-auto text-center px-10 md:px-14 lg:px-0">
         <Image
