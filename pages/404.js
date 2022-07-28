@@ -7,6 +7,20 @@ export default function NotFound() {
     <DefaultLayout>
       <Head>
         <title>Not Found | Rixusart</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="application-name" content="Rixusart" />
+        <meta
+          name="description"
+          content="Aradığınız sayfa Rixusart'ta bulunamadı"
+        />
+        <meta
+          name="keywords"
+          content="aradığınız, sayfa, rixusart, bulunamadı, arama, bulma"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Mustafa Osman Tekin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="flex flex-col">
         <div className="flex flex-col items-center">
