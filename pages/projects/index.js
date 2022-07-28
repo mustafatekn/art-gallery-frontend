@@ -8,12 +8,29 @@ export default function Projects({ projects }) {
     <DefaultLayout title="Projects">
       <Head>
         <title>Projects | Rixusart</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Rixusart Projects" content="Rixusart" />
+        <meta
+          name="description"
+          content="Yağlı boya tablo, soyut resim, duvar resmi ve dekoratif boya gibi sanatın birçok dalından projeler"
+        />
+        <meta
+          name="keywords"
+          content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Projects, Projeler, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Mustafa Osman Tekin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="container flex flex-col mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
           {projects?.map((project) => (
-            <div className="mx-auto px-5 xl:px-0 box-border w-full h-full" key={project.id}>
-              <div className="relative filter ease-in-out duration-700 w-full h-full" >
+            <div
+              className="mx-auto px-5 xl:px-0 box-border w-full h-full"
+              key={project.id}
+            >
+              <div className="relative filter ease-in-out duration-700 w-full h-full">
                 <Link href={`/projects/${project.url}`}>
                   <a>
                     <img
