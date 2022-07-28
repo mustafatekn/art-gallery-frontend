@@ -9,14 +9,14 @@ export default function Projects({ projects }) {
       <Head>
         <title>Projects | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="Rixusart" content="Rixusart" />
+        <meta name="Rixusart Projects" content="Rixusart" />
         <meta
           name="description"
           content="Yağlı boya tablo, soyut resim, duvar resmi ve dekoratif boya gibi sanatın birçok dalından projeler"
         />
         <meta
           name="keywords"
-          content="Rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim"
+          content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Projects, Projeler, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />

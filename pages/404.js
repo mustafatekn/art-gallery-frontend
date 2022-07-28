@@ -8,14 +8,14 @@ export default function NotFound() {
       <Head>
         <title>Not Found | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="Rixusart" content="Rixusart" />
+        <meta name="Rixusart Not Found" content="Rixusart" />
         <meta
           name="description"
           content="Aradığınız sayfa Rixusart'ta bulunamadı"
         />
         <meta
           name="keywords"
-          content="aradığınız, sayfa, rixusart, bulunamadı, arama, bulma"
+          content="Rixusart, aradığınız, sayfa, rixusart, bulunamadı, arama, bulma, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />

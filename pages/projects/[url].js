@@ -21,13 +21,31 @@ export default function ProjectDetails({ project }) {
     <DefaultLayout>
       <Head>
         <title>{`${project.title} | Rixusart`}</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+          name={`Rixusart ${project.title}(${
+            location.origin + location.pathname
+          }) Details`}
+          content="Rixusart"
+        />
+        <meta
+          name="description"
+          content={`Rixusart ${project.title}(${
+            location.origin + location.pathname
+          }) Details with all gallery`}
+        />
+        <meta
+          name="keywords"
+          content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Proje Detayları, Project, Details, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Mustafa Osman Tekin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {show ? (
         <div className="w-full fixed bottom-0 top-0 left-0 right-0 z-50 mx-auto bg-transparent h-screen mt-3 pb-7 backdrop-blur-sm">
-          <button
-            className="float-right mr-2"
-            onClick={() => setShow(false)}
-          >
+          <button className="float-right mr-2" onClick={() => setShow(false)}>
             <svg
               role="img"
               className="w-7 h-7"

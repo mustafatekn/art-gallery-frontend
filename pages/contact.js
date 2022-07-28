@@ -7,14 +7,14 @@ export default function Contact() {
       <Head>
         <title>Contact | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="Rixusart" content="Rixusart" />
+        <meta name="Rixusart Contact" content="Rixusart" />
         <meta
           name="description"
           content="Soru sormak veya görüş, öneri bildirmek için Rixusart ile iletişime geçebilirsiniz."
         />
         <meta
           name="keywords"
-          content="rixusart, iletişim, Email, soru, cevap, görüş, öneri"
+          content="rixusart, Rixusart, iletişim, Email, soru, cevap, görüş, öneri, Instagram, Facebook, Pinterest instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />

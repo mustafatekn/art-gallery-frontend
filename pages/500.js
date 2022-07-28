@@ -8,12 +8,12 @@ export default function InternalServerError() {
       <Head>
         <title>Server Error | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="Rixusart" content="Rixusart" />
+        <meta name="Rixusart Internal Server Error" content="Rixusart" />
         <meta
           name="description"
           content="Rixusart'a ulaşılamadı, server hatası"
         />
-        <meta name="keywords" content="Rixusart, ulaşılamadı, server, hata" />
+        <meta name="keywords" content="Rixusart, rixusart, ulaşılamadı, server, hata, Instagram, Facebook, Pinterest, instagram, facebook, pinterest, error" />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />
         <meta name="author" content="Mustafa Osman Tekin" />
