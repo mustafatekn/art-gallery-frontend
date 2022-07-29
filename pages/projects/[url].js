@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useRouter } from "next/router";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
@@ -17,23 +18,29 @@ export default function ProjectDetails({ project }) {
   const [initialIndex, setInitialIndex] = useState(0);
   const prevButton = useRef(null);
   const nextButton = useRef(null);
+  
   return (
     <DefaultLayout>
       <Head>
         <title>{`${project.title} | Rixusart`}</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name={`Rixusart ${project.title}(${
-            location.origin + location.pathname
-          }) Details`}
-          content="Rixusart"
-        />
-        <meta
-          name="description"
-          content={`Rixusart ${project.title}(${
-            location.origin + location.pathname
-          }) Details with all gallery`}
-        />
+        {typeof window !== "undefined" && (
+          <meta
+            name={`Rixusart ${project.title}(${
+              location.origin + location.pathname
+            }) Details`}
+            content="Rixusart"
+          />
+        )}
+        {typeof window !== "undefined" && (
+          <meta
+            name="description"
+            content={`Rixusart ${project.title}(${
+              location.origin + location.pathname
+            }) Details with all gallery`}
+          />
+        )}
+
         <meta
           name="keywords"
           content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Proje Detayları, Project, Details, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
