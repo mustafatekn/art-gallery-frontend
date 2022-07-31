@@ -1,9 +1,9 @@
 export const projectData = [
   {
     id: 1,
-    title: "title 1",
+    title: "Title 1",
     text: "text 1",
-    location: "Kayseri",
+    location: "Ankara",
     images: [
       {
         url: "https://www.thoughtco.com/thmb/VG5-1LGCmdWyW23Uf7Vr-R_5tqk=/3504x2336/filters:fill(auto,1)/GettyImages-116248249-5be59c3cc9e77c00514fed87.jpg",

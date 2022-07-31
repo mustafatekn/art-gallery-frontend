@@ -15,7 +15,7 @@ export default function Landing() {
         />
         <meta
           name="keywords"
-          content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Anasayfa, Ana, Sayfa, Proje, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
+          content="Rixusart, rixusart, Mural, Interior Architecture, Interior, Architecture,iç, mimari, iç mimari, dekorasyon, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Anasayfa, Ana, Sayfa, Proje, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />
