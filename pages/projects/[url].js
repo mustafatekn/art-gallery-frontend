@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { useRouter } from "next/router";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
@@ -18,7 +17,7 @@ export default function ProjectDetails({ project }) {
   const [initialIndex, setInitialIndex] = useState(0);
   const prevButton = useRef(null);
   const nextButton = useRef(null);
-  
+  console.log("project details rendered");
   return (
     <DefaultLayout>
       <Head>
@@ -43,7 +42,7 @@ export default function ProjectDetails({ project }) {
 
         <meta
           name="keywords"
-          content="Rixusart, rixusart, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Proje Detayları, Project, Details, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
+          content="Rixusart, rixusart, Mural, Interior Architecture, Interior, Architecture,iç, mimari, iç mimari, dekorasyon, Art, Resim, Sanat, Dekoratif Boya, Yağlı Boya, Tablo, Emir Teke, Duvar Resmi, Duvar Ressamı, Soyut Resim, Proje, Proje Detayları, Project, Details, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />
@@ -131,20 +130,25 @@ export default function ProjectDetails({ project }) {
         </div>
       ) : (
         <>
-          <div className="mx-auto w-full flex h-[300px] md:h-[500px] xl:h-[600px] 2xl:h-[750px] mb-10 md:mb-16">
+          <div className="mx-auto w-full flex h-[180px] md:h-[400px] xl:h-[550px] 2xl:h-[700px] mb-10 md:mb-16">
             <div className="w-full relative filter ease-in-out duration-700">
               <Image
                 src={project.thumbnail.url}
                 alt={project.thumbnail.description}
                 loading="lazy"
                 layout="fill"
-                objectFit="fill"
+                objectFit="cover"
                 objectPosition="center"
               />
-              <div className="w-full h-full mx-auto text-center absolute bottom-0 right-0 left-0 top-0 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 duration-700 hover:backdrop-brightness-50 hover:backdrop-grayscale-0 space-y-2">
-                <h2 className="font-extrabold text-5xl ">{project.title}</h2>
-                <h6 className="font-bold text-4xl">{project.location}</h6>
-                <p className="font-semibold text-2xl">{project.text}</p>
+              <div className="w-full h-full mx-auto text-center absolute -bottom-5 right-0 left-0 top-0 flex flex-col items-start justify-end text-white">
+                <div className="text-white w-fit text-left bg-gradient-to-r from-slate-700 flex flex-col pl-5 lg:pl-7 xl:pl-10 pr-12 md:pr-20 lg:pr-16 xl:pr-36 py-0 md:py-1 lg:py-2 ">
+                  <h2 className="font-extrabold text-sm md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl h-fit">
+                    {project.title}
+                  </h2>
+                  <h6 className="font-bold text-xs md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl h-fit">
+                    {project.location}
+                  </h6>
+                </div>
               </div>
             </div>
           </div>

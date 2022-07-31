@@ -14,7 +14,7 @@ export default function Contact() {
         />
         <meta
           name="keywords"
-          content="rixusart, Rixusart, iletişim, Email, soru, cevap, görüş, öneri, Instagram, Facebook, Pinterest instagram, facebook, pinterest"
+          content="rixusart, Rixusart, iletişim, Email, soru, cevap, görüş, öneri, Instagram, Facebook, Pinterest, instagram, facebook, pinterest"
         />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="7 days" />
