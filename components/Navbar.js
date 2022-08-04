@@ -71,9 +71,7 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
-
-      {open && (
-        <nav className="fixed bottom-0 top-0 left-0 right-0 bg-white z-40 block md:hidden raleway-medium">
+      <nav className={`fixed top-0 left-0 w-full h-full bg-white z-40  md:hidden raleway-medium ease-linear duration-300 ${open ? "translate-x-0"  : "-translate-x-full"}`}>
           <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
             <div className="flex self-start items-center">
               <Link href="/">
@@ -138,7 +136,6 @@ export default function Navbar() {
             </ul>
           </div>
         </nav>
-      )}
     </>
   );
 }
