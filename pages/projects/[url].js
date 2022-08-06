@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, memo } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import { projectData } from "../../data";
 import Head from "next/head";
@@ -12,12 +12,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-export default function ProjectDetails({ project }) {
+function ProjectDetails({ project }) {
   const [show, setShow] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
   const prevButton = useRef(null);
   const nextButton = useRef(null);
-  console.log("project details rendered");
+
   return (
     <DefaultLayout>
       <Head>
@@ -181,6 +181,7 @@ export default function ProjectDetails({ project }) {
     </DefaultLayout>
   );
 }
+export default memo(ProjectDetails);
 
 export async function getServerSideProps({ params }) {
   const project = projectData.find((i) => i.url === params.url);

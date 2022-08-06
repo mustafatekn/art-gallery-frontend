@@ -1,8 +1,8 @@
+import { useEffect, useState, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
-export default function Navbar() {
+function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -71,71 +71,76 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
-      <nav className={`fixed top-0 left-0 w-full h-full bg-white z-40  md:hidden raleway-medium ease-linear duration-300 ${open ? "translate-x-0"  : "-translate-x-full"}`}>
-          <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
-            <div className="flex self-start items-center">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/assets/images/logo.png"
-                    width={270}
-                    height={36}
-                    alt="Rixusart Logo"
-                    className="h-6 sm:h-9"
-                  />
-                </a>
-              </Link>
-            </div>
-            <button
-              className="flex flex-col mr-1 justify-start mt-1"
-              onClick={() => setOpen(false)}
-            >
-              <svg role="img" className="w-7 h-7 ml-auto">
-                <use
-                  xlinkHref="/assets/icons/sprite.svg#close"
-                  stroke="#fff"
-                  strokeWidth={0.78}
+      <nav
+        className={`fixed top-0 left-0 w-full h-full bg-white z-40  md:hidden raleway-medium ease-linear duration-300 ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
+          <div className="flex self-start items-center">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/images/logo.png"
+                  width={270}
+                  height={36}
+                  alt="Rixusart Logo"
+                  className="h-6 sm:h-9"
                 />
-              </svg>
-            </button>
+              </a>
+            </Link>
           </div>
-          <div className="w-full  md:w-auto text-center" id="mobile-menu">
-            <ul className="flex flex-col mt-10 font-semibold w-3/4 mx-auto">
-              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
-                <Link
-                  href="/projects"
-                  className="block py-2 pr-4 pl-3 text-primary-black"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
-                <Link
-                  href="/rixusart"
-                  className="block py-2 pr-4 pl-3 text-primary-black"
-                >
-                  About Me
-                </Link>
-              </li>
-              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
-                <Link
-                  href="/shop"
-                  className="inline-block py-2 pr-4 pl-3 text-primary-black"
-                >
-                  Shop
-                </Link>
-              </li>
-              <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
-                <Link
-                  href="/contact"
-                  className="block py-2 pr-4 pl-3 text-primary-black"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+          <button
+            className="flex flex-col mr-1 justify-start mt-1"
+            onClick={() => setOpen(false)}
+          >
+            <svg role="img" className="w-7 h-7 ml-auto">
+              <use
+                xlinkHref="/assets/icons/sprite.svg#close"
+                stroke="#fff"
+                strokeWidth={0.78}
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="w-full  md:w-auto text-center" id="mobile-menu">
+          <ul className="flex flex-col mt-10 font-semibold w-3/4 mx-auto">
+            <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
+              <Link
+                href="/projects"
+                className="block py-2 pr-4 pl-3 text-primary-black"
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
+              <Link
+                href="/rixusart"
+                className="block py-2 pr-4 pl-3 text-primary-black"
+              >
+                About Me
+              </Link>
+            </li>
+            <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
+              <Link
+                href="/shop"
+                className="inline-block py-2 pr-4 pl-3 text-primary-black"
+              >
+                Shop
+              </Link>
+            </li>
+            <li className="py-3 border-b-2" onClick={() => setOpen(false)}>
+              <Link
+                href="/contact"
+                className="block py-2 pr-4 pl-3 text-primary-black"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </>
   );
 }
+export default memo(Navbar);

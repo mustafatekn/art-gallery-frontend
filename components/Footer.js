@@ -1,4 +1,6 @@
-export default function Footer() {
+import { memo } from "react";
+
+function Footer() {
   return (
     <div className="w-full  pb-2 bg-white z-40 flex flex-col flex-1 flex-grow justify-end raleway-medium">
       <div className="container mx-auto bottom-0">
@@ -43,3 +45,4 @@ export default function Footer() {
     </div>
   );
 }
+export default memo(Footer);
