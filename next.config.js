@@ -11,4 +11,7 @@ module.exports = {
       "cdn.pixabay.com",
     ],
   },
+  env: {
+    SERVER_URL: "https://rixusart-backend.herokuapp.com/posts"
+  }
 };
