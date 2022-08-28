@@ -1,7 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
 import Head from "next/head";
 import DefaultLayout from "../../layouts/DefaultLayout";
-import { projectData } from "../../data";
 import Slider from "../../components/Slider";
 import ProjectImages from "../../components/ProjectImages";
 
@@ -46,19 +46,23 @@ export default function ProjectDetails({ project }) {
           index={sliderIndex}
           project={project}
         />
-      ) : (
+      ) : project ? (
         <ProjectImages
           project={project}
           setSliderIndex={(index) => setSliderIndex(index)}
           setShow={(show) => setShow(show)}
         />
+      ) : (
+        <div className="container mx-auto my-3">Project not found.</div>
       )}
     </DefaultLayout>
   );
 }
 
 export async function getServerSideProps({ params }) {
-  const project = projectData.find((i) => i.url === params.url);
+  const project = await (
+    await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)
+  ).data;
 
   return {
     props: {

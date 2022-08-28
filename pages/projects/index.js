@@ -1,6 +1,6 @@
 import DefaultLayout from "../../layouts/DefaultLayout";
-import { projectData } from "../../data";
 import Head from "next/head";
+import axios from "axios";
 import Project from "../../components/Project";
 
 export default function Projects({ projects }) {
@@ -25,8 +25,8 @@ export default function Projects({ projects }) {
       </Head>
       <div className="container flex flex-col mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
-          {projects?.map((project) => (
-            <Project project={project} key={project.id} />
+          {projects.length > 0 && projects.map((project) => (
+            <Project project={project} key={project._id} />
           ))}
         </div>
       </div>
@@ -35,7 +35,8 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projects = [...projectData];
+  const projects = await (await axios.get(`${process.env.SERVER_URL}/posts`)).data;
+
   return {
     props: {
       projects,
