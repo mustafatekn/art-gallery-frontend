@@ -29,7 +29,7 @@ export default function Contact() {
         message: "",
       });
     } catch (error) {
-      throw error;
+      console.log(error);
     }
   };
 
