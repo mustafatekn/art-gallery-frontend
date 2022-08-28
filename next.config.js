@@ -12,6 +12,6 @@ module.exports = {
     ],
   },
   env: {
-    SERVER_URL: "https://rixusart-backend.herokuapp.com/posts"
+    SERVER_URL: "https://rixusart-backend.herokuapp.com"
   }
 };

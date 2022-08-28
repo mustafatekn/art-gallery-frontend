@@ -1,10 +1,9 @@
 import DefaultLayout from "../../layouts/DefaultLayout";
 import Head from "next/head";
-import Project from "../../components/Project";
 import axios from "axios";
+import Project from "../../components/Project";
 
 export default function Projects({ projects }) {
-  console.log(projects);
   return (
     <DefaultLayout title="Projects">
       <Head>
@@ -26,7 +25,7 @@ export default function Projects({ projects }) {
       </Head>
       <div className="container flex flex-col mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
-          {projects?.map((project) => (
+          {projects.length > 0 && projects.map((project) => (
             <Project project={project} key={project._id} />
           ))}
         </div>
@@ -36,8 +35,7 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const response = await axios.get("https://rixusart-backend.herokuapp.com/posts");
-  const projects = await response.data;
+  const projects = await (await axios.get(`${process.env.SERVER_URL}/posts`)).data;
 
   return {
     props: {
