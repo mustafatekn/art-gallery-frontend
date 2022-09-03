@@ -91,7 +91,7 @@ function Navbar() {
             </Link>
           </div>
           <button
-            className="flex flex-col mr-1 justify-start mt-1"
+            className="flex flex-col mr-3 justify-start mt-1"
             onClick={() => setOpen(false)}
           >
             <svg role="img" className="w-7 h-7 ml-auto">
