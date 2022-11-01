@@ -47,11 +47,11 @@ export default function Contact() {
   const handleValidate = () => {
     const errors = {};
 
-    if (!messageContent.name) errors.name = "Name is required";
-    if (!messageContent.email) errors.email = "Email is required";
-    if (!messageContent.phone) errors.phone = "Phone is required";
-    if (!messageContent.subject) errors.subject = "Subject is required";
-    if (!messageContent.message) errors.message = "Message is required";
+    if (!messageContent.name.trim()) errors.name = "Name is required";
+    if (!messageContent.email.trim()) errors.email = "Email is required";
+    if (!messageContent.phone.trim()) errors.phone = "Phone is required";
+    if (!messageContent.subject.trim()) errors.subject = "Subject is required";
+    if (!messageContent.message.trim()) errors.message = "Message is required";
 
     const emailRegExp =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
