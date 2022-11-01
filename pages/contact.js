@@ -14,6 +14,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const createTicket = async (e) => {
     e.preventDefault();
@@ -34,6 +35,8 @@ export default function Contact() {
         subject: "",
         message: "",
       });
+      setSuccess(true);
+      setSubmitted(false);
     } catch (error) {
       console.log(error);
     } finally {
@@ -44,13 +47,11 @@ export default function Contact() {
   const handleValidate = () => {
     const errors = {};
 
-    if (messageContent.name.trim() === "") errors.name = "Name is required";
-    if (messageContent.email.trim() === "") errors.email = "Email is required";
-    if (messageContent.phone.trim() === "") errors.phone = "Phone is required";
-    if (messageContent.subject.trim() === "")
-      errors.subject = "Subject is required";
-    if (messageContent.message.trim() === "")
-      errors.message = "Message is required";
+    if (!messageContent.name) errors.name = "Name is required";
+    if (!messageContent.email) errors.email = "Email is required";
+    if (!messageContent.phone) errors.phone = "Phone is required";
+    if (!messageContent.subject) errors.subject = "Subject is required";
+    if (!messageContent.message) errors.message = "Message is required";
 
     const emailRegExp =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -60,6 +61,11 @@ export default function Contact() {
         : "Email must be in email format";
     setErrors(errors);
     return errors;
+  };
+
+  const handleChange = (e) => {
+    setMessageContent({ ...messageContent, [e.target.name]: e.target.value });
+    if (success) setSuccess(false);
   };
 
   return (
@@ -117,17 +123,13 @@ export default function Contact() {
               <form className="w-full" onSubmit={createTicket}>
                 <div className="form-input-wrapper w-full">
                   <input
+                    name="name"
                     type="text"
                     className={`border-b ${
                       errors.name ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Name"
-                    onChange={(e) =>
-                      setMessageContent({
-                        ...messageContent,
-                        name: e.target.value,
-                      })
-                    }
+                    onChange={handleChange}
                     onBlur={() => submitted && handleValidate()}
                     value={messageContent.name}
                   />
@@ -140,17 +142,13 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <input
+                    name="email"
                     type="text"
                     className={`border-b ${
                       errors.email ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Email"
-                    onChange={(e) =>
-                      setMessageContent({
-                        ...messageContent,
-                        email: e.target.value,
-                      })
-                    }
+                    onChange={handleChange}
                     onBlur={() => submitted && handleValidate()}
                     value={messageContent.email}
                   />
@@ -163,17 +161,13 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <input
+                    name="phone"
                     type="text"
                     className={`border-b ${
                       errors.phone ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Phone"
-                    onChange={(e) =>
-                      setMessageContent({
-                        ...messageContent,
-                        phone: e.target.value,
-                      })
-                    }
+                    onChange={handleChange}
                     onBlur={() => submitted && handleValidate()}
                     value={messageContent.phone}
                   />
@@ -186,17 +180,13 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <input
+                    name="subject"
                     type="text"
                     className={`border-b ${
                       errors.subject ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Subject"
-                    onChange={(e) =>
-                      setMessageContent({
-                        ...messageContent,
-                        subject: e.target.value,
-                      })
-                    }
+                    onChange={handleChange}
                     onBlur={() => submitted && handleValidate()}
                     value={messageContent.subject}
                   />
@@ -209,16 +199,12 @@ export default function Contact() {
 
                 <div className="form-input-wrapper w-full mt-5">
                   <textarea
+                    name="message"
                     className={`border-b ${
                       errors.message ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 h-40 pl-2 focus:outline-none segoe`}
                     placeholder="Message"
-                    onChange={(e) =>
-                      setMessageContent({
-                        ...messageContent,
-                        message: e.target.value,
-                      })
-                    }
+                    onChange={handleChange}
                     onBlur={() => submitted && handleValidate()}
                     value={messageContent.message}
                   />
@@ -231,13 +217,18 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full">
                   <button
                     type="submit"
-                    className="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded w-full mt-3"
+                    className={`text-white font-bold py-2 px-4 rounded w-full mt-3 h-10 flex items-center justify-center duration-300 ${
+                      success
+                        ? "bg-green-600 disabled:opacity-100"
+                        : "bg-gray-800 hover:bg-gray-900 disabled:opacity-70 disabled:hover:bg-gray-800"
+                    }`}
+                    disabled={loading || success}
                   >
                     {loading ? (
                       <>
                         <svg
                           aria-hidden="true"
-                          className="mr-2 w-8 h-8 inline text-gray-200 animate-spin dark:text-gray-600 fill-white"
+                          className="w-7 h-7 font-bold inline text-gray-200 animate-spin dark:text-gray-600 fill-white"
                           viewBox="0 0 100 101"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -253,8 +244,10 @@ export default function Contact() {
                         </svg>
                         <span className="sr-only">Loading...</span>
                       </>
-                    ) : (
+                    ) : !success ? (
                       <span>Send Message</span>
+                    ) : (
+                      <span>Your message has been sent.</span>
                     )}
                   </button>
                 </div>
