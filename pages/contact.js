@@ -2,6 +2,7 @@ import axios from "axios";
 import Head from "next/head";
 import { useState } from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
+import { useValidate, useValidateOnBlur } from "../hooks/validate";
 
 export default function Contact() {
   const [messageContent, setMessageContent] = useState({
@@ -20,7 +21,8 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     setSubmitted(true);
-    const errors = handleValidate();
+    const errors = useValidate(messageContent, setErrors);
+
     if (Object.keys(errors).length > 0) {
       setLoading(false);
       return setErrors(errors);
@@ -42,25 +44,6 @@ export default function Contact() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleValidate = () => {
-    const errors = {};
-
-    if (!messageContent.name.trim()) errors.name = "Name is required";
-    if (!messageContent.email.trim()) errors.email = "Email is required";
-    if (!messageContent.phone.trim()) errors.phone = "Phone is required";
-    if (!messageContent.subject.trim()) errors.subject = "Subject is required";
-    if (!messageContent.message.trim()) errors.message = "Message is required";
-
-    const emailRegExp =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    if (!emailRegExp.test(messageContent.email))
-      errors.email = errors.email
-        ? errors.email
-        : "Email must be in email format";
-    setErrors(errors);
-    return errors;
   };
 
   const handleChange = (e) => {
@@ -130,7 +113,9 @@ export default function Contact() {
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Name"
                     onChange={handleChange}
-                    onBlur={() => submitted && handleValidate()}
+                    onBlur={() =>
+                      useValidateOnBlur(messageContent, setErrors, submitted)
+                    }
                     value={messageContent.name}
                   />
                   {errors.name && (
@@ -149,7 +134,9 @@ export default function Contact() {
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Email"
                     onChange={handleChange}
-                    onBlur={() => submitted && handleValidate()}
+                    onBlur={() =>
+                      useValidateOnBlur(messageContent, setErrors, submitted)
+                    }
                     value={messageContent.email}
                   />
                   {errors.email && (
@@ -168,7 +155,9 @@ export default function Contact() {
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Phone"
                     onChange={handleChange}
-                    onBlur={() => submitted && handleValidate()}
+                    onBlur={() =>
+                      useValidateOnBlur(messageContent, setErrors, submitted)
+                    }
                     value={messageContent.phone}
                   />
                   {errors.phone && (
@@ -187,7 +176,9 @@ export default function Contact() {
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Subject"
                     onChange={handleChange}
-                    onBlur={() => submitted && handleValidate()}
+                    onBlur={() =>
+                      useValidateOnBlur(messageContent, setErrors, submitted)
+                    }
                     value={messageContent.subject}
                   />
                   {errors.subject && (
@@ -205,7 +196,9 @@ export default function Contact() {
                     } w-full py-1.5 h-40 pl-2 focus:outline-none segoe`}
                     placeholder="Message"
                     onChange={handleChange}
-                    onBlur={() => submitted && handleValidate()}
+                    onBlur={() =>
+                      useValidateOnBlur(messageContent, setErrors, submitted)
+                    }
                     value={messageContent.message}
                   />
                   {errors.message && (
