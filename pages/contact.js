@@ -3,8 +3,18 @@ import Head from "next/head";
 import { useState } from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
 import { useInputs } from "../hooks/useInputs";
+import Modal from "../components/Modal";
 
 export default function Contact() {
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [modalOptions, setModalOptions] = useState({
+    show: false,
+    message: "",
+    type: "",
+  });
+
   const [inputs, setInputs, clearState] = useInputs({
     name: "",
     email: "",
@@ -12,10 +22,6 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const createTicket = async (e) => {
     e.preventDefault();
@@ -31,8 +37,13 @@ export default function Contact() {
       await axios.post(`${process.env.SERVER_URL}/ticket`, inputs);
       clearState();
       setSubmitted(false);
+      setModalOptions({
+        show: true,
+        type: "success",
+        message: "Your message has been sent.",
+      });
     } catch (error) {
-      console.log(error);
+      setModalOptions({ show: true, type: "error", message: error.message });
     } finally {
       setLoading(false);
     }
@@ -59,6 +70,10 @@ export default function Contact() {
 
   return (
     <DefaultLayout title="Contact">
+      <Modal
+        options={modalOptions}
+        setOptions={(options) => setModalOptions(options)}
+      />
       <Head>
         <title>Contact | Rixusart</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

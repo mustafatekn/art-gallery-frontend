@@ -5,7 +5,6 @@ export const useInputs = (params) => {
 
   const handleChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
-    //if(success) setSuccess(false)
   };
 
   const clearState = () => {
