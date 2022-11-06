@@ -3,7 +3,7 @@ export default function Modal({ options, setOptions }) {
     return (
       <div className="absolute inset-0 backdrop-brightness-50 w-screen h-screen z-[999]">
         <div
-          className={`absolute top-1/4 left-1/2 -translate-x-1/2 bg-white rounded-lg modal-animation overflow-hidden`}
+          className={`absolute top-1/4 left-1/2 -translate-x-1/2 bg-white rounded-lg overflow-hidden z-[999]`}
           style={{ minWidth: "450px" }}
         >
           <div className="space-y-2 text-center">
