@@ -2,19 +2,20 @@ import axios from "axios";
 import Head from "next/head";
 import { useState } from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
+import { useInputs } from "../hooks/useInputs";
 
 export default function Contact() {
-  const [messageContent, setMessageContent] = useState({
+  const [inputs, setInputs, clearState] = useInputs({
     name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
   });
+
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const createTicket = async (e) => {
     e.preventDefault();
@@ -27,15 +28,8 @@ export default function Contact() {
     }
 
     try {
-      await axios.post(`${process.env.SERVER_URL}/ticket`, messageContent);
-      setMessageContent({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-      setSuccess(true);
+      await axios.post(`${process.env.SERVER_URL}/ticket`, inputs);
+      clearState();
       setSubmitted(false);
     } catch (error) {
       console.log(error);
@@ -47,25 +41,20 @@ export default function Contact() {
   const handleValidate = () => {
     const errors = {};
 
-    if (!messageContent.name.trim()) errors.name = "Name is required";
-    if (!messageContent.email.trim()) errors.email = "Email is required";
-    if (!messageContent.phone.trim()) errors.phone = "Phone is required";
-    if (!messageContent.subject.trim()) errors.subject = "Subject is required";
-    if (!messageContent.message.trim()) errors.message = "Message is required";
+    if (!inputs.name.trim()) errors.name = "Name is required";
+    if (!inputs.email.trim()) errors.email = "Email is required";
+    if (!inputs.phone.trim()) errors.phone = "Phone is required";
+    if (!inputs.subject.trim()) errors.subject = "Subject is required";
+    if (!inputs.message.trim()) errors.message = "Message is required";
 
     const emailRegExp =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    if (!emailRegExp.test(messageContent.email))
+    if (!emailRegExp.test(inputs.email))
       errors.email = errors.email
         ? errors.email
         : "Email must be in email format";
     setErrors(errors);
     return errors;
-  };
-
-  const handleChange = (e) => {
-    setMessageContent({ ...messageContent, [e.target.name]: e.target.value });
-    if (success) setSuccess(false);
   };
 
   return (
@@ -129,9 +118,9 @@ export default function Contact() {
                       errors.name ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Name"
-                    onChange={handleChange}
+                    onChange={setInputs}
                     onBlur={() => submitted && handleValidate()}
-                    value={messageContent.name}
+                    value={inputs.name}
                   />
                   {errors.name && (
                     <div className="text-red-500 pl-2 text-xs mt-2">
@@ -148,9 +137,9 @@ export default function Contact() {
                       errors.email ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Email"
-                    onChange={handleChange}
+                    onChange={setInputs}
                     onBlur={() => submitted && handleValidate()}
-                    value={messageContent.email}
+                    value={inputs.email}
                   />
                   {errors.email && (
                     <div className="text-red-500 pl-2 text-xs mt-2">
@@ -167,9 +156,9 @@ export default function Contact() {
                       errors.phone ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Phone"
-                    onChange={handleChange}
+                    onChange={setInputs}
                     onBlur={() => submitted && handleValidate()}
-                    value={messageContent.phone}
+                    value={inputs.phone}
                   />
                   {errors.phone && (
                     <div className="text-red-500 pl-2 text-xs mt-2">
@@ -186,9 +175,9 @@ export default function Contact() {
                       errors.subject ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     placeholder="Subject"
-                    onChange={handleChange}
+                    onChange={setInputs}
                     onBlur={() => submitted && handleValidate()}
-                    value={messageContent.subject}
+                    value={inputs.subject}
                   />
                   {errors.subject && (
                     <div className="text-red-500 pl-2 text-xs mt-2">
@@ -204,9 +193,9 @@ export default function Contact() {
                       errors.message ? "border-red-500" : "border-slate-200"
                     } w-full py-1.5 h-40 pl-2 focus:outline-none segoe`}
                     placeholder="Message"
-                    onChange={handleChange}
+                    onChange={setInputs}
                     onBlur={() => submitted && handleValidate()}
-                    value={messageContent.message}
+                    value={inputs.message}
                   />
                   {errors.message && (
                     <div className="text-red-500 pl-2 text-xs mt-2">
@@ -217,12 +206,8 @@ export default function Contact() {
                 <div className="form-input-wrapper w-full">
                   <button
                     type="submit"
-                    className={`text-white font-bold py-2 px-4 rounded w-full mt-3 h-10 flex items-center justify-center duration-300 ${
-                      success
-                        ? "bg-green-600 disabled:opacity-100"
-                        : "bg-gray-800 hover:bg-gray-900 disabled:opacity-70 disabled:hover:bg-gray-800"
-                    }`}
-                    disabled={loading || success}
+                    className={`text-white font-bold py-2 px-4 rounded w-full mt-3 h-10 flex items-center justify-center duration-300 bg-gray-800 hover:bg-gray-900 disabled:opacity-70 disabled:hover:bg-gray-800`}
+                    disabled={loading}
                   >
                     {loading ? (
                       <>
@@ -244,10 +229,8 @@ export default function Contact() {
                         </svg>
                         <span className="sr-only">Loading...</span>
                       </>
-                    ) : !success ? (
-                      <span>Send Message</span>
                     ) : (
-                      <span>Your message has been sent.</span>
+                      <span>Send Message</span>
                     )}
                   </button>
                 </div>
