@@ -7,9 +7,9 @@ export const useInputs = (params) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
-  const clearState = () => {
-    setInputs({...params});
-  }
+  const clearInputs = () => {
+    setInputs({ ...params });
+  };
 
-  return [inputs, handleChange, clearState];
+  return [inputs, handleChange, clearInputs];
 };

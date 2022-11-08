@@ -11,7 +11,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const [Modal, setModalProps] = useModal();
-  const [inputs, setInputs, clearState] = useInputs({
+  const [inputs, setInputs, clearInputs] = useInputs({
     name: "",
     email: "",
     phone: "",
@@ -31,7 +31,7 @@ export default function Contact() {
 
     try {
       await axios.post(`${process.env.SERVER_URL}/ticket`, inputs);
-      clearState();
+      clearInputs();
       setSubmitted(false);
       setModalProps({
         show: true,
