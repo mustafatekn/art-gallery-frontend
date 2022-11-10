@@ -3,7 +3,7 @@ import Product from "../../components/Product";
 import DefaultLayout from "../../layouts/DefaultLayout";
 
 export default function Shop() {
-  const [products, setProducts] = useState([
+  const [products] = useState([
     {
       _id: "62ee6a478ffef5fbafc4bc20",
       title: "Title 1",
