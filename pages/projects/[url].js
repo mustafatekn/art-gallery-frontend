@@ -85,6 +85,7 @@ export async function getServerSideProps({ params }) {
           };
         })
     ).data;
+    project = result
   } catch (error) {
     console.log(error);
   }
