@@ -61,14 +61,33 @@ export default function ProjectDetails({ project }) {
 
 export async function getServerSideProps({ params }) {
   let project;
-  try{
-    project = await (
-      await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)
+  try {
+    const result = await (
+      await axios
+        .get(`${process.env.SERVER_URL}/post/${params.url}`)
+        .catch((error) => {
+          console.log(error);
+          project = {
+            title: "Sa",
+            url: "dsfsdf",
+            description: "dkgdfsg",
+            location: "fkghkdfh",
+            thumbnail: {
+              url: "dsfgsdg",
+              description: "dflhfg",
+            },
+            images: [
+              {
+                url: "ksdfgsdkg",
+                description: "dfgkdfkh",
+              },
+            ],
+          };
+        })
     ).data;
-  }catch(error){
+  } catch (error) {
     console.log(error);
   }
-  
 
   return {
     props: {
