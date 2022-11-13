@@ -60,9 +60,15 @@ export default function ProjectDetails({ project }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const project = await (
-    await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)
-  ).data;
+  let project;
+  try{
+    project = await (
+      await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)
+    ).data;
+  }catch(error){
+    console.log(error);
+  }
+  
 
   return {
     props: {
