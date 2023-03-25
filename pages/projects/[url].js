@@ -16,18 +16,16 @@ export default function ProjectDetails({ project }) {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         {typeof window !== "undefined" && (
           <meta
-            name={`Rixusart ${project.title}(${
-              location.origin + location.pathname
-            }) Details`}
+            name={`Rixusart ${project.title}(${location.origin + location.pathname
+              }) Details`}
             content="Rixusart"
           />
         )}
         {typeof window !== "undefined" && (
           <meta
             name="description"
-            content={`Rixusart ${project.title}(${
-              location.origin + location.pathname
-            }) Details with all gallery`}
+            content={`Rixusart ${project.title}(${location.origin + location.pathname
+              }) Details with all gallery`}
           />
         )}
 
@@ -60,9 +58,7 @@ export default function ProjectDetails({ project }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const project = await (
-    await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)
-  ).data;
+  const project = (await axios.get(`${process.env.SERVER_URL}/post/${params.url}`)).data;
 
   return {
     props: {

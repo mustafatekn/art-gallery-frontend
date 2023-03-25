@@ -35,7 +35,7 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projects = await (await axios.get(`${process.env.SERVER_URL}/posts`)).data;
+  const projects = (await axios.get(`${process.env.SERVER_URL}/posts`)).data;
 
   return {
     props: {
