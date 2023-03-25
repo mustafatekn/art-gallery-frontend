@@ -28,7 +28,7 @@ export default function Landing() {
           alt="rixusart-cat"
           width={1000}
           height={700}
-          className="object-cover object-center"
+          className="object-cover object-center block mx-auto"
         />
       </div>
     </DefaultLayout>

@@ -9,9 +9,8 @@ export default function ProjectImages({ project, setSliderIndex, setShow }) {
             src={project.thumbnail.url}
             alt={project.thumbnail.description}
             loading="lazy"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            className="object-cover object-center"
           />
           <div className="w-full h-full mx-auto text-center absolute -bottom-5 right-0 left-0 top-0 flex flex-col items-start justify-end text-white">
             <div className="text-white w-fit text-left bg-gradient-to-r from-slate-700 flex flex-col pl-5 lg:pl-7 xl:pl-10 pr-12 md:pr-20 lg:pr-16 xl:pr-36 py-0 md:py-1 lg:py-2 ">

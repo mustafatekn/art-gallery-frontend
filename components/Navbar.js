@@ -16,14 +16,12 @@ function Navbar() {
       <nav className="bg-white px-2 sm:px-4 py-6 border-b-2 fixed top-0 right-0 left-0 z-50 hidden md:block raleway-medium">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link href="/" className="flex items-center">
-            <a>
-              <Image
-                src="/assets/images/logo.png"
-                width={270}
-                height={36}
-                alt="Rixusart Logo"
-              />
-            </a>
+            <Image
+              src="/assets/images/logo.png"
+              width={270}
+              height={36}
+              alt="Rixusart Logo"
+            />
           </Link>
           <div className="w-full  md:w-auto" id="mobile-menu">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -72,22 +70,19 @@ function Navbar() {
         </button>
       </div>
       <nav
-        className={`fixed top-0 left-0 w-full h-full bg-white z-40  md:hidden raleway-medium ease-linear duration-300 ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full bg-white z-40  md:hidden raleway-medium ease-linear duration-300 ${open ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex flex-row justify-between border-b-2 py-6 mx-auto">
           <div className="flex self-start items-center">
             <Link href="/">
-              <a>
-                <Image
-                  src="/assets/images/logo.png"
-                  width={270}
-                  height={36}
-                  alt="Rixusart Logo"
-                  className="h-6 sm:h-9"
-                />
-              </a>
+              <Image
+                src="/assets/images/logo.png"
+                width={270}
+                height={36}
+                alt="Rixusart Logo"
+                className="h-6 sm:h-9"
+              />
             </Link>
           </div>
           <button

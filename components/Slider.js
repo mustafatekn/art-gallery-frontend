@@ -41,8 +41,8 @@ function Slider({ index, setShow, project }) {
                 <SwiperSlide key={index} className="w-full h-full">
                   <Image
                     src={img.url}
-                    className="object-contain rounded-sm border border-slate-400"
-                    layout="fill"
+                    className="object-contain rounded-sm"
+                    fill
                     alt={img.description}
                   />
                 </SwiperSlide>
