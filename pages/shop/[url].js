@@ -123,12 +123,12 @@ export default function ProductDetails({ product }) {
 
             <div className="form-input-wrapper w-full mt-5">
               <input
-                name="cvd"
+                name="cvc"
                 type="text"
                 className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                 placeholder="Cvc"
                 onChange={setInputs}
-                value={inputs.cvd}
+                value={inputs.cvc}
               />
             </div>
 
