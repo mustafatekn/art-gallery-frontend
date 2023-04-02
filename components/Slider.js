@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 //eslint-disable-next-line
 import "swiper/css/pagination";
 
-function Slider({ index, setShow, project }) {
+const Slider = ({ index, setShow, project }) => {
   const prevButton = useRef(null);
   const nextButton = useRef(null);
 
@@ -37,7 +37,7 @@ function Slider({ index, setShow, project }) {
             initialSlide={index}
           >
             <div>
-              {project?.images?.map((img, index) => (
+              {project.images.map((img, index) => (
                 <SwiperSlide key={index} className="w-full h-full">
                   <Image
                     src={img.url}
