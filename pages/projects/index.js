@@ -2,8 +2,27 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import Head from "next/head";
 import axios from "axios";
 import Project from "../../components/Project";
+import { memo, useEffect, useState } from "react";
+import ProjectsSkeleton from "../../components/ProjectsSkeleton";
 
-export default function Projects({ projects }) {
+const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        setLoading(true);
+        const projects = await axios.get(`${process.env.SERVER_URL}/posts`);
+        setProjects(projects.data)
+      } catch (error) {
+        console.log(error.message)
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, [])
+
   return (
     <DefaultLayout title="Projects">
       <Head>
@@ -24,22 +43,14 @@ export default function Projects({ projects }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="container flex flex-col mx-auto my-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
+        {loading ? <ProjectsSkeleton /> : <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
           {projects.length > 0 && projects.map((project) => (
             <Project project={project} key={project._id} />
           ))}
-        </div>
+        </div>}
       </div>
     </DefaultLayout>
   );
 }
 
-export async function getStaticProps() {
-  const projects = (await axios.get(`${process.env.SERVER_URL}/posts`)).data;
-
-  return {
-    props: {
-      projects,
-    },
-  };
-}
+export default memo(Projects);

@@ -1,9 +1,10 @@
+import { memo } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styles from "../styles/DefaultLayout.module.css";
 import Image from "next/image";
 
-export default function DefaultLayout({ children, title }) {
+const DefaultLayout = ({ children, title }) => {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />
@@ -28,3 +29,4 @@ export default function DefaultLayout({ children, title }) {
     </div>
   );
 }
+export default memo(DefaultLayout);

@@ -1,8 +1,9 @@
 import DefaultLayout from "../layouts/DefaultLayout";
 import Image from "next/image";
 import Head from "next/head";
+import { memo } from "react";
 
-export default function Landing() {
+const Landing = () => {
   return (
     <DefaultLayout>
       <Head>
@@ -34,3 +35,4 @@ export default function Landing() {
     </DefaultLayout>
   );
 }
+export default memo(Landing);

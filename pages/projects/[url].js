@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import axios from "axios";
 import Head from "next/head";
 import DefaultLayout from "../../layouts/DefaultLayout";
@@ -7,7 +7,7 @@ import ProjectImages from "../../components/ProjectImages";
 import { useRouter } from "next/router";
 import ProjectDetailsSkeleton from "../../components/ProjectDetailsSkeleton";
 
-export default function ProjectDetails() {
+const ProjectDetails = () => {
   const [show, setShow] = useState(false);
   const [sliderIndex, setSliderIndex] = useState(0);
   const [project, setProject] = useState({});
@@ -78,3 +78,4 @@ export default function ProjectDetails() {
     </DefaultLayout>
   );
 }
+export default memo(ProjectDetails);

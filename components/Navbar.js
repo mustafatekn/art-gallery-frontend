@@ -2,7 +2,7 @@ import { useEffect, useState, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-function Navbar() {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
