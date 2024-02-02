@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 const ProjectsSkeleton = () => {
-    const temporaryData = [1, 2, 3, 4];
+    const temporaryData = [1, 2, 3, 4, 5, 6, 7, 8];
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
             {temporaryData.map((index) => (

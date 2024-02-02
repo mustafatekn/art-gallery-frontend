@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 const ProjectDetailsSkeleton = () => {
-    const temporaryData = [1, 2, 3, 4];
+    const temporaryData = [1, 2, 3, 4, 5, 6, 7, 8];
 
     return (
         <>

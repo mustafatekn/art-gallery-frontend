@@ -12,6 +12,6 @@ module.exports = {
     ],
   },
   env: {
-    SERVER_URL: "https://art-gallery-backend.vercel.app"
+    SERVER_URL: "http://localhost:5000"
   }
 };

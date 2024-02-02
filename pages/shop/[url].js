@@ -4,9 +4,13 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import { useInputs } from "../../hooks/useInputs";
 import { useState } from "react";
 import { useModal } from "../../hooks/useModal";
+import PaymentInformation from "../../components/PaymentInformation";
+import AddressInformation from "../../components/AddressInformation";
 
 export default function ProductDetails({ product }) {
   const [loading, setLoading] = useState(false);
+  const [activeForm, setActiveForm] = useState("payment");
+
   const [inputs, setInputs, clearInputs] = useInputs({
     cardHolderName: "",
     cardNumber: "",
@@ -15,6 +19,7 @@ export default function ProductDetails({ product }) {
     cvc: "",
   });
   const [Modal, setModalProps] = useModal();
+
 
   const checkout = async (e) => {
     e.preventDefault();
@@ -49,18 +54,16 @@ export default function ProductDetails({ product }) {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         {typeof window !== "undefined" && (
           <meta
-            name={`Rixusart ${product.title}(${
-              location.origin + location.pathname
-            }) Details`}
+            name={`Rixusart ${product.title}(${location.origin + location.pathname
+              }) Details`}
             content="Rixusart"
           />
         )}
         {typeof window !== "undefined" && (
           <meta
             name="description"
-            content={`Rixusart ${product.title}(${
-              location.origin + location.pathname
-            }) Details with all gallery`}
+            content={`Rixusart ${product.title}(${location.origin + location.pathname
+              }) Details with all gallery`}
           />
         )}
 
@@ -75,62 +78,25 @@ export default function ProductDetails({ product }) {
       </Head>
       <div className="container mx-auto mt-10 flex items-center justify-center">
         <div className="flex flex-col mt-10 lg:mt-0 items-center lg:items-start px-4 2xl:w-4/5 raleway-medium">
-          <h6 className="mb-5">Price: 5000 TL</h6>
           <form className="w-full" onSubmit={checkout}>
-            <div className="form-input-wrapper w-full mt-5">
-              <input
-                name="cardHolderName"
-                type="text"
-                className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
-                placeholder="Kart Sahibinin Adı Soyadı"
-                onChange={setInputs}
-                value={inputs.cardHolderName}
-              />
+            <h6 className="mb-5">Price: 5000 TL</h6>
+
+            <div className="flex">
+              <div className={`${activeForm === 'payment' ? "opacity-100" : "opacity-75"} bg-zinc-50 text-black h-16 w-1/2 flex items-center justify-between px-3 cursor-pointer mt-5`} onClick={() => setActiveForm("payment")}>
+                <h5 className="text-xl">Payment Information</h5>
+              </div>
+
+              <div className={`${activeForm === 'address' ? "opacity-100" : "opacity-75"}  bg-zinc-50 text-black h-16 w-1/2 flex items-center justify-between px-3 cursor-pointer mt-5`} onClick={() => setActiveForm("address")}>
+                <h5 className="text-xl">Address</h5>
+              </div>
             </div>
 
-            <div className="form-input-wrapper w-full mt-5">
-              <input
-                name="cardNumber"
-                type="text"
-                className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
-                placeholder="Kart Numarası"
-                onChange={setInputs}
-                value={inputs.cardNumber}
-              />
+            <div className="mt-5">
+              {activeForm === 'payment' ? <PaymentInformation inputs={inputs} setInputs={(data) => setInputs(data)} /> : <AddressInformation inputs={inputs} setInputs={(data) => setInputs(data)} />}
+
+
             </div>
 
-            <div className="form-input-wrapper w-full mt-5">
-              <input
-                name="expireMonth"
-                type="text"
-                className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
-                placeholder="Ay"
-                onChange={setInputs}
-                value={inputs.expireMonth}
-              />
-            </div>
-
-            <div className="form-input-wrapper w-full mt-5">
-              <input
-                name="expireYear"
-                type="text"
-                className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
-                placeholder="Yıl"
-                onChange={setInputs}
-                value={inputs.expireYear}
-              />
-            </div>
-
-            <div className="form-input-wrapper w-full mt-5">
-              <input
-                name="cvc"
-                type="text"
-                className={`border-b w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
-                placeholder="Cvc"
-                onChange={setInputs}
-                value={inputs.cvc}
-              />
-            </div>
 
             <div className="form-input-wrapper w-full">
               <button
