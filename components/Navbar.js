@@ -43,14 +43,6 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="/shop"
-                  className="inline-block py-2 pr-4 pl-3 text-primary-black"
-                >
-                  Shop
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="block py-2 pr-4 pl-3 text-primary-black"
                 >
