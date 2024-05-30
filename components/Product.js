@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function Product({ product }) {
   const { url, thumbnail, title } = product;
+
   return (
     <div className="mx-auto px-5 xl:px-0 box-border w-full h-full">
       <div className="relative filter ease-in-out duration-700 w-full h-full">

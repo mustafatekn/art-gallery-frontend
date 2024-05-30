@@ -59,7 +59,7 @@ const ProjectDetails = () => {
       </Head>
       {
         loading ? (<ProjectDetailsSkeleton />) :
-          project !== {} ? (
+          project._id ? (
             show ? (
               <Slider
                 setShow={(show) => setShow(show)}

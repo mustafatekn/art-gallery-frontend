@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function ProjectImages({ project, setSliderIndex, setShow }) {
+  
   const onClickImage = (index) => {
     setSliderIndex(index);
     setShow(true);

@@ -7,9 +7,7 @@ export const useModal = () => {
     type: "",
   });
 
-  const handleOptions = (newOptions) => {
-    setOptions({ ...newOptions });
-  };
+  const handleOptions = (newOptions) => setOptions({ ...newOptions });
 
   const Modal = () => {
     if (options.show)
@@ -22,11 +20,10 @@ export const useModal = () => {
             <div className="space-y-2 text-center">
               <div className="shadow-sm py-3">
                 <h5
-                  className={`ml-3 font-bold text-2xl  tracking-wider ${
-                    options.type === "success"
-                      ? "text-green-500"
-                      : "text-red-500"
-                  }`}
+                  className={`ml-3 font-bold text-2xl  tracking-wider ${options.type === "success"
+                    ? "text-green-500"
+                    : "text-red-500"
+                    }`}
                 >
                   {options.type === "success" ? "Success!" : "Error!"}
                 </h5>
@@ -51,9 +48,8 @@ export const useModal = () => {
                 )}
                 <div className="font-bold">{options.message}</div>
                 <button
-                  className={`px-10 py-1 rounded-md text-white font-bold ${
-                    options.type === "success" ? "bg-green-500" : "bg-red-500"
-                  }`}
+                  className={`px-10 py-1 rounded-md text-white font-bold ${options.type === "success" ? "bg-green-500" : "bg-red-500"
+                    }`}
                   onClick={() => setOptions({ ...options, show: false })}
                 >
                   Okay

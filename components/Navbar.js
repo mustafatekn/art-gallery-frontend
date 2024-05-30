@@ -6,9 +6,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    open
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "unset");
+    open ? document.body.style.overflow = "hidden"
+      : document.body.style.overflow = "unset";
   }, [open]);
 
   return (

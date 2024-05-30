@@ -1,8 +1,6 @@
 import { memo } from "react";
 
 const ProjectDetailsSkeleton = () => {
-    const temporaryData = [1, 2, 3, 4];
-
     return (
         <>
             <div className="mx-auto w-full flex h-[180px] md:h-[400px] xl:h-[550px] 2xl:h-[700px] mb-10 md:mb-16">
@@ -14,7 +12,7 @@ const ProjectDetailsSkeleton = () => {
                 </div>
             </div>
             <div className="grid-cols-8 gap-12 lg:grid mx-5 lg:mx-12">
-                {temporaryData.map((index) => (
+                {Array.prototype.fill(4).map((index) => (
                     <div
                         className={
                             index > 2

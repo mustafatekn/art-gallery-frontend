@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function Project({ project }) {
   const { url, thumbnail, title } = project;
+
   return (
     <div className="mx-auto px-5 xl:px-0 box-border w-full h-full">
       <div className="relative filter ease-in-out duration-700 w-full h-full">
