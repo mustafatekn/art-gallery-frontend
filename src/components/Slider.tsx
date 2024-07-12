@@ -5,7 +5,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ProjectObject } from "@/app/projects/types";
+import { ProjectObject } from "@/app/types";
 import { NavigationOptions } from "swiper/types";
 import ArrowLeftIcon from '@/assets/svg/arrow-left.svg';
 import ArrowRightIcon from '@/assets/svg/arrow-right.svg';

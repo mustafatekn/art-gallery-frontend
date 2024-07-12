@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ProjectObject } from "@/app/projects/types" 
+import { ProjectObject } from "@/app/types"; 
 
 type ProjectProps = {
     project: ProjectObject
