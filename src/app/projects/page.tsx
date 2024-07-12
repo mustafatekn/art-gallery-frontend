@@ -1,6 +1,6 @@
 import { apiRequest } from "@/utils/api/apiRequest"
 import Project from "@/components/Project";
-import { ProjectObject } from "../types"
+import { ProjectObject } from "@/app/types";
 import { services } from "@/utils/api/apiUrls"
 
 type Projects = Array<ProjectObject>

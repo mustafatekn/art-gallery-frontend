@@ -1,4 +1,4 @@
-import { ProjectObject } from "@/app/projects/types";
+import { ProjectObject } from "@/app/types";
 import Image from "next/image";
 import { memo } from "react";
 

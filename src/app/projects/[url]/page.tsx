@@ -1,5 +1,5 @@
 "use client";
-import { ProjectObject } from "../../types";
+import { ProjectObject } from "@/app/types";
 import { memo, useEffect, useState } from "react";
 import ProjectDetailsSkeleton from "@/components/ProjectDetailsSkeleton";
 import Slider from "@/components/Slider";
