@@ -7,9 +7,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ProjectObject } from "@/app/projects/types";
 import { NavigationOptions } from "swiper/types";
-import ArrowLeftIcon from '@/app/assets/svg/arrow-left.svg';
-import ArrowRightIcon from '@/app/assets/svg/arrow-right.svg';
-import CloseIcon from '@/app/assets/svg/close.svg';
+import ArrowLeftIcon from '@/assets/svg/arrow-left.svg';
+import ArrowRightIcon from '@/assets/svg/arrow-right.svg';
+import CloseIcon from '@/assets/svg/close.svg';
 
 type SliderProps = {
     index: number;

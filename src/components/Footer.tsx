@@ -1,7 +1,7 @@
 import { memo } from "react"
-import InstagramIcon from '@/app/assets/svg/instagram.svg';
-import FacebookIcon from '@/app/assets/svg/facebook.svg';
-import PinterestIcon from '@/app/assets/svg/pinterest.svg';
+import InstagramIcon from '@/assets/svg/instagram.svg';
+import FacebookIcon from '@/assets/svg/facebook.svg';
+import PinterestIcon from '@/assets/svg/pinterest.svg';
 
 const Footer = () => {
     return (

@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form"
-import EmailIcon from '@/app/assets/svg/email.svg';
-import PhoneIcon from '@/app/assets/svg/phone.svg';
-import SpinnerIcon from '@/app/assets/svg/spinner.svg';
+import EmailIcon from '@/assets/svg/email.svg';
+import PhoneIcon from '@/assets/svg/phone.svg';
+import SpinnerIcon from '@/assets/svg/spinner.svg';
+import phoneCodes from '@/assets/json/phoneCodes.json'
 import Modal from "@/components/Modal/Modal";
 import { apiRequest } from "@/utils/api/apiRequest";
 import { services } from "@/utils/api/apiUrls";
-import phoneCodes from '@/app/assets/json/phoneCodes.json'
 
 type Inputs = {
   name: string;

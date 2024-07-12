@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ModalConfig, ModalComponent, ModalMethods } from './types';
 import { MODAL_TYPES } from '@/utils/enums';
-import SuccessIcon from '@/app/assets/svg/success.svg';
-import ErrorIcon from '@/app/assets/svg/error.svg';
+import SuccessIcon from '@/assets/svg/success.svg';
+import ErrorIcon from '@/assets/svg/error.svg';
 
 const Modal: ModalComponent = (props) => {
   const { title, icon, children, message, onClose } = props;

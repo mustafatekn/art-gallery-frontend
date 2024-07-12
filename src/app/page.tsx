@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { memo } from "react";
-import LandingCat from './assets/img/landing-cat.jpg';
+import LandingCat from '@/assets/img/landing-cat.jpg';
 
 const Home = () => {
   return (

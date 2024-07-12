@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { memo, useState } from "react";
-import MenuIcon from '@/app/assets/svg/menu.svg';
-import CloseIcon from '@/app/assets/svg/close.svg';
-import Logo from '@/app/assets/img/logo.png'
+import MenuIcon from '@/assets/svg/menu.svg';
+import CloseIcon from '@/assets/svg/close.svg';
+import Logo from '@/assets/img/logo.png'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);

@@ -4,18 +4,18 @@
 
 @font-face {
   font-family: "raleway-medium";
-  src: url("./assets/font/Raleway/Raleway-Medium.ttf");
+  src: url("../assets/font/Raleway/Raleway-Medium.ttf");
   font-style: normal;
 }
 
 @font-face {
   font-family: "raleway-light";
-  src: url("./assets/font/Raleway/Raleway-Light.ttf");
+  src: url("../assets/font/Raleway/Raleway-Light.ttf");
 }
 
 @font-face {
   font-family: "roboto-thin";
-  src: url("./assets/font/Roboto/Roboto-Thin.ttf");
+  src: url("../assets/font/Roboto/Roboto-Thin.ttf");
 }
 
 @layer base {

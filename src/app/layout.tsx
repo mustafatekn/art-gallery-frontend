@@ -5,8 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import styles from './layout.module.css';
 import Footer from "@/components/Footer";
-import Logo from './assets/img/logo.png'
-import { ModalProvider } from "@/hooks/useModal";
+import Logo from '@/assets/img/logo.png'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,31 +24,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ModalProvider>
-          <div className="flex flex-col h-screen">
-            <Navbar />
-            <div className="block md:hidden mt-5 text-center">
-              {Logo && (
-                <Image
-                  src={Logo}
-                  alt="rixusart-cat"
-                  width={270}
-                  height={36}
-                  className="object-cover object-center"
-                />
-              )}
-            </div>
-            <main id={styles.contentWrapper}>
-              {title && (
-                <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
-                  <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
-                </div>
-              )}
-              {children}
-            </main>
-            <Footer />
+        <div className="flex flex-col h-screen">
+          <Navbar />
+          <div className="block md:hidden mt-5 text-center">
+            {Logo && (
+              <Image
+                src={Logo}
+                alt="rixusart-cat"
+                width={270}
+                height={36}
+                className="object-cover object-center"
+              />
+            )}
           </div>
-        </ModalProvider>
+          <main id={styles.contentWrapper}>
+            {title && (
+              <div className="bg-zinc-50 h-16 md:h-24 flex flex-col justify-center items-center mt-5 md:mt-0">
+                <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+              </div>
+            )}
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
