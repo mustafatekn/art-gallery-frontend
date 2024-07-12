@@ -19,6 +19,7 @@ const Navbar = () => {
                             width={270}
                             height={36}
                             alt="Rixusart Logo"
+                            priority={true}
                         />
                     </Link>
                     <div className="w-full  md:w-auto" id="mobile-menu">
