@@ -21,10 +21,10 @@ const getProjectDetails = async (url: string): Promise<ProjectObject | null> => 
 
 const ProjectDetailsPage = (props: ProjectDetailsPageProps) => {
     const { params } = props;
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState<boolean>(false);
     const [project, setProject] = useState<ProjectObject | null>(null);
-    const [sliderIndex, setSliderIndex] = useState(0);
-    const [loading, setLoading] = useState(true);
+    const [sliderIndex, setSliderIndex] = useState<number>(0);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchProjectDetails = async () => {

@@ -7,7 +7,7 @@ import CloseIcon from '@/assets/svg/close.svg';
 import Logo from '@/assets/img/logo.png'
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
 
     return (
         <>
@@ -29,14 +29,6 @@ const Navbar = () => {
                                     className="block py-2 pr-4 pl-3 text-primary-black"
                                 >
                                     Projects
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/rixusart"
-                                    className="block py-2 pr-4 pl-3 text-primary-black"
-                                >
-                                    About Me
                                 </Link>
                             </li>
                             <li>
