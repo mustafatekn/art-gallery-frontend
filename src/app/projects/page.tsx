@@ -12,7 +12,6 @@ async function getProjects() {
 
 const Projects = async () => {
   const projects: Projects = await getProjects();
-  console.log("projects", projects)
 
   return (
     <div className="container flex flex-col mx-auto my-10">
