@@ -32,6 +32,7 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<Inputs>({ mode: 'onBlur' })
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -58,7 +59,10 @@ const Contact = () => {
           message: error.message,
         })
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+        reset();
+      });
   }
 
   return (
