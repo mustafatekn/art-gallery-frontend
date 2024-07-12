@@ -127,19 +127,18 @@ const Contact = () => {
                     <select
                       id="phoneCode"
                       {...register("phoneCode", { required: 'Phone code is required' })}
-                      className={`border-b ${errors.phoneCode ? "border-red-500" : "border-slate-200"} w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
+                      className={`border-b ${errors.phoneCode ? "border-red-500" : "border-slate-200"} mt-1 w-full py-1.5 rounded-sm pl-2 focus:outline-none segoe`}
                     >
                       {phoneCodes.map(({ code, country }, index) => (
                         <option key={index} value={code}>{`${code} - ${country}`}</option>
                       ))}
                     </select>
-                    {errors.phoneCode && <div className="text-red-500 text-xs mt-2">{errors.phoneCode.message}</div>}
                   </div>
 
                   <div className="form-input-wrapper flex-1">
                     <input
                       type="text"
-                      className={`border-b ${errors.phoneNumber ? "border-red-500" : "border-slate-200"
+                      className={`border-b pl-2 ${errors.phoneNumber ? "border-red-500" : "border-slate-200"
                         } w-full py-1.5 rounded-sm focus:outline-none segoe`}
                       placeholder="Phone"
                       {...register("phoneNumber", {
