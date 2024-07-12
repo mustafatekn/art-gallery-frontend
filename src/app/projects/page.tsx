@@ -1,5 +1,5 @@
 import { apiRequest } from "@/utils/api/apiRequest"
-import Project from "./components/Project"
+import Project from "@/components/Project";
 import { ProjectObject } from "./types"
 import { services } from "@/utils/api/apiUrls"
 

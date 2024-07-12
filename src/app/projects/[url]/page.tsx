@@ -1,9 +1,9 @@
 "use client";
 import { ProjectObject } from "../types";
 import { memo, useEffect, useState } from "react";
-import ProjectDetailsSkeleton from "./components/ProjectDetailsSkeleton";
+import ProjectDetailsSkeleton from "@/components/ProjectDetailsSkeleton";
 import Slider from "@/components/Slider";
-import ProjectImages from "./components/ProjectDetails";
+import ProjectImages from "@/components/ProjectDetails";
 import Error from "next/error";
 import { apiRequest } from "@/utils/api/apiRequest";
 import { services } from "@/utils/api/apiUrls";
