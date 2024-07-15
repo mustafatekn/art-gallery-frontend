@@ -6,7 +6,14 @@ import { services } from "@/utils/api/apiUrls"
 type Projects = Array<ProjectObject>
 
 async function getProjects() {
-  const res = await apiRequest<Projects>({ url: services.getPosts });
+  const config = {
+    url: services.getPosts,
+    headers: {
+      'Cache-Control': 'no-store, max-age=0'
+    }
+  };
+
+  const res = await apiRequest<Projects>(config);
   return res.data;
 }
 
