@@ -17,7 +17,7 @@ async function getProjects() {
   return res.data;
 }
 
-export const revalidate = 10;
+export const revalidate = 600;
 
 const Projects = async () => {
   const projects: Projects = await getProjects();
